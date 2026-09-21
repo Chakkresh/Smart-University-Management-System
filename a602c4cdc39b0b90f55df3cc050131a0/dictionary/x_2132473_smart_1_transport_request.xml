@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="a59d5511c397cb90f55df3cc050131dd" label="Transport Request" max_length="40" name="x_2132473_smart_1_transport_request" type="collection">
+        <element label="Drop Location" max_length="40" name="drop_location" type="string"/>
+        <element label="Remarks" max_length="40" name="remarks" type="string"/>
+        <element choice="3" default="requested" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Completed" sequence="4" value="completed"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Allocated" sequence="3" value="allocated"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Request Number" max_length="40" name="number" type="string"/>
+        <element label="Route" max_length="40" name="route" type="string"/>
+        <element label="Pickup Location" max_length="40" name="pickup_location" type="string"/>
+        <element label="Assigned Transport" max_length="40" name="assigned_transport" type="string"/>
+        <element label="Student" max_length="32" name="student" reference="x_2132473_smart_1_student_master" type="reference"/>
+        <element label="Requested Date" max_length="40" name="requested_date" type="glide_date"/>
+        <index name="index">
+            <element name="student"/>
+        </index>
+    </element>
+</database>

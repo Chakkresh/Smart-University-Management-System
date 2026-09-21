@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>hostel_required</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-13 11:41:39</sys_created_on>
+        <sys_id>697c6f29c3978f90f55df3cc050131b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>hostel_required</sys_name>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_ui_policy_action_697c6f29c3978f90f55df3cc050131b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-13 11:41:39</sys_updated_on>
+        <table>x_2132473_smart_1_student_master</table>
+        <ui_policy display_value="Hosteller-Hostel Required">3813ef61c3978f90f55df3cc050131f0</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=697c6f29c3978f90f55df3cc050131b5"/>
+</record_update>

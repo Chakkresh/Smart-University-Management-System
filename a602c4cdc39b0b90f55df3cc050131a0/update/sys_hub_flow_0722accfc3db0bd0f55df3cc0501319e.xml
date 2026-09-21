@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=664000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Hostel or Transport Request</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>create_service_request_after_payment</internal_name>
+        <label_cache>[{"name":"Updated_1.current.student","label":"Trigger - Record Updated➛Fee Management Record➛Student | student","reference":"x_2132473_smart_1_student_master","reference_display":"Student Master","type":"reference","base_type":"reference","parent_table_name":"x_2132473_smart_1_fee_management","column_name":"student","usedInstances":{"4eed5a1b-2855-44d3-a5ad-ac9f528c21fa":["student"],"37bac775-bfe5-4a51-8322-c81812fcba6e":["student"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Fee Management Record","reference":"x_2132473_smart_1_fee_management","reference_display":"Fee Management","type":"reference","base_type":"reference","usedInstances":{"4eed5a1b-2855-44d3-a5ad-ac9f528c21fa":["student"],"37bac775-bfe5-4a51-8322-c81812fcba6e":["student"]},"attributes":{}},{"name":"Updated_1.current.student.hostel_required","label":"Trigger - Record Updated➛Fee Management Record➛Student | student➛Hostel Required","reference":"","reference_display":"Hostel Required","type":"boolean","base_type":"boolean","parent_table_name":"x_2132473_smart_1_student_master","column_name":"hostel_required","usedInstances":{"072d8346-483b-4bc1-b2e9-707c725121bd":["condition"]}},{"name":"Updated_1.current.student.transport_required","label":"Trigger - Record Updated➛Fee Management Record➛Student | student➛Transport Required","reference":"","reference_display":"Transport Required","type":"boolean","base_type":"boolean","parent_table_name":"x_2132473_smart_1_student_master","column_name":"transport_required","usedInstances":{"1466e088-bbac-4f9b-8ce9-403091311e6d":["condition"]}}]</label_cache>
+        <master_snapshot>d5b4e047c31f0bd0f55df3cc05013166</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Create Service Request After Payment</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>71b4e047c31f0bd0f55df3cc050131e6</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0722accfc3db0bd0f55df3cc0501319e</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Create Service Request After Payment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_hub_flow_0722accfc3db0bd0f55df3cc0501319e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>c6b42447c31f0bd0f55df3cc050131c2</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_2132473_smart_1_fee_management">payment_status=paid<item display_value="Paid" endquery="false" field="payment_status" goto="false" newquery="false" operator="=" or="false" value="paid"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>71b4e047c31f0bd0f55df3cc050131e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <table>x_2132473_smart_1_fee_management</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>0722accfc3db0bd0f55df3cc0501319e</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:32</sys_created_on>
+        <sys_id>7db4e047c31f0bd0f55df3cc050131e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <trigger display_value="">71b4e047c31f0bd0f55df3cc050131e6</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0722accfc3db0bd0f55df3cc0501319e^sys_idNOT IN7db4e047c31f0bd0f55df3cc050131e6"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0722accfc3db0bd0f55df3cc0501319e^sys_idNOT INc722accfc3db0bd0f55df3cc0501319f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0722accfc3db0bd0f55df3cc0501319e</id>
+        <name>Create Service Request After Payment</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:26</sys_created_on>
+        <sys_id>c722accfc3db0bd0f55df3cc0501319f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:47:26</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c722accfc3db0bd0f55df3cc0501319f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=0722accfc3db0bd0f55df3cc0501319e^sys_idNOT IN06322403c31f0bd0f55df3cc05013109,c2322403c31f0bd0f55df3cc05013115,f932e003c31f0bd0f55df3cc050131db"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</model>
+        <model_id>0722accfc3db0bd0f55df3cc0501319e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0722accfc3db0bd0f55df3cc0501319e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:38</sys_created_on>
+        <sys_id>06322403c31f0bd0f55df3cc05013109</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=06322403c31f0bd0f55df3cc05013109"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</model>
+        <model_id>0722accfc3db0bd0f55df3cc0501319e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0722accfc3db0bd0f55df3cc0501319e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:38</sys_created_on>
+        <sys_id>c2322403c31f0bd0f55df3cc05013115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:47:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c2322403c31f0bd0f55df3cc05013115"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</model>
+        <model_id>0722accfc3db0bd0f55df3cc0501319e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0722accfc3db0bd0f55df3cc0501319e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:38</sys_created_on>
+        <sys_id>f932e003c31f0bd0f55df3cc050131db</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f932e003c31f0bd0f55df3cc050131db"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=0722accfc3db0bd0f55df3cc0501319e^sys_idNOT INe132e003c31f0bd0f55df3cc050131d3"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:37</sys_created_on>
+        <sys_id>e132e003c31f0bd0f55df3cc050131d3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:30</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0722accfc3db0bd0f55df3cc0501319e^sys_idNOT IN2fe3a8c3c31f0bd0f55df3cc050131e5,51036c43c31f0bd0f55df3cc050131d8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>1466e088-bbac-4f9b-8ce9-403091311e6d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:55:06</sys_created_on>
+        <sys_id>2fe3a8c3c31f0bd0f55df3cc050131e5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:59:16</sys_updated_on>
+        <ui_id>37bac775-bfe5-4a51-8322-c81812fcba6e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUTW/bMAz9K4XOhmHHWdbmNrTIaWuBdsulaw3GohMBsuzqI00W5L+PsuQ06BpsA3qpTxb5SL5H6/l+xwRnUzbJMft0kU+qIi+KUZaNzsf5YlIs8hEvAHHMEqagQUJaWEgs+0PC1iCdD27KUV6Mxp+L0jSgbZmXVoMyXUvvGp8cGktoLkwnYTuPRd8HyNntAVKthOQaFZvePySsA01zLGo23b1K/StrCQuUfpinfUKF3XZvxr4e155dh0SrueeTJQw3FhVHIlKDNJiwBhQH2+otm1rtKKAR+I2S2wNiJZSlhsxjN0b8orHnmcfVSMoqDLnDsYwbC+H6CizcUefKOh2h1aoVFZqwE441OGkvj2MBcNNZ0apQ0suM1a10jboOK2GHBsMHoogzRAI7r9MzjzLqu1X7fDuwnAnVryQmZVuBPJzAWi0Wzno+O4YSG2pUNtB1Qi3LTrdr0RcTlyZdSjqktWyfaagRS5VC5YmntFZIZxS/6sNz0MKr+EZtqHifMLM1lxKMedFCSyyfnGcSlEUNZViDL6m06OwXGrDGSHefDHbgmF2cvFj54uUi9Q4wR1Yw1vk5P12WFXy3+9ERd+RlnlZO07psGgH7/aOxYJ0JyOgSuk1/+OQdOv6nrf6ufrDVTKDk5o11DJ7ChqRYLMN6XvkqJs/mMRm9lb+Xt/JJ1j8fyGFB3Ic32NG/9ITVHn4DmYNH3HsGAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2fe3a8c3c31f0bd0f55df3cc050131e5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>072d8346-483b-4bc1-b2e9-707c725121bd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:51:09</sys_created_on>
+        <sys_id>51036c43c31f0bd0f55df3cc050131d8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:59:16</sys_updated_on>
+        <ui_id>4eed5a1b-2855-44d3-a5ad-ac9f528c21fa</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUy24aMRT9FeT1aDTDUJqwixKhLtpESlo2aWJdxnfAkucRPwgU8e+9HhuC0qC2UrsIO9/nOWfu4X7LpGATNs4x+3Cej8siL4phlg3PRvl8XMzzoSgAccQS1kCNVGlhrpD3j4StQDkfXPNhXgxHHwtuatCW53zZGouKa3xyaCyVCmk6BZtZ7PjU5we3h3y5lEpobNjk/iFhHWjaYFGzyfZV6k/xKpijotKvHvAJ/HbTvRn7fNw7uA6JVguPJ0sYri02AglIBcpgwmpoBNhWb9jEakcBjSBuGrU5VCxlY2kg87VrI3/Q2rPM11VIzEoMucOTR7lCuLoCC3c0ubROx9Jy2coSTdBEYAVO2cvjWCi46axsm9DS04zdrXJ1cx0kYYcB+69DEWcIBHaep0ceaVR3y/b5do9yKptekphUbQnq8AJrtZw76/FsGSqsaRCvoetks+CdbleybyYsdbpQ9Egr1T7TUiMXTQqlB56SrJBOKX7Vh2egpWfxhcZQ8y5hZmMuFRjzwoVE5E/OIwnMIgceZPAtpZadvaAFK4xwd8neCAKz85OHlc9fDqm/fXNkAmOd3/PdZVkhtttvHWFHwfO0dJrksmks2O0ej9whNYrQ4i/n0ViwzoRANA/d2S/2+a+7/tKKv1dsb8WpRCXMGxLufYg1kbTIg6SvvBiTg1lMRj/m/8qP+Tjrf+/IlYHcuzfl0f/vCXs+/AS2/I2pqQYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=51036c43c31f0bd0f55df3cc050131d8"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=0722accfc3db0bd0f55df3cc0501319e^sys_idNOT IN3e836c83c31f0bd0f55df3cc0501311a,89826c03c31f0bd0f55df3cc050131f3"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">41b4e047c31f0bd0f55df3cc05013108</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:53:25</sys_created_on>
+        <sys_id>3e836c83c31f0bd0f55df3cc0501311a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:30</sys_updated_on>
+        <ui_id>1466e088-bbac-4f9b-8ce9-403091311e6d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYBnQdAjNhrfghYBCrQNkLi5tIGwIimbKEUyfNhxDf97l3o4RuM0Rtpjb+YsuTszmoW3RAdvgndzfemcWCgy+3afEKEihr+3RDAyI00GTX5Bc1oW07LIsuLdeV5PyzovWAkcSpIQBS3Hm1QrJrzQquqAhKxAhliYW1DOaOvPbvhDEJYzLDLhjITN3Z/u0KWQzPKBmQGLfT23ZLb9reQ3hlcSai6x1a23Qi3w+an8x4fvRwFnnzrkZWVxHuJunKQti7TyLCH80XPFkP6sAel4QlpQDLy2mz1iObBrJZ+ApVAe25F4+dGJn9i7mEzixYajRsr74v5YDeb1MF1qQfm1iQR7xEMthzdUy9CqL72OaDtvIEg/2o5IcNiPm0g6shgoNbdLvb4ZB14J1QkcilJTkPsTeLShDp67+GG45C02qlowBs2pjNUr0T1GLm26kHhIG6nXODSmLgUaiafoEaRXiH/o4DuwIqr4jG3wcU+zBido1SUU23mLEnadLdVDiIR6gYOUqncDLzhqhfGXOGfFB9a7ZIj3BUyaSZ5NjsfjfHokBAfJ3m6/GiTOWZWnNFj0yqfOhzg+9WOiKzskerf7HrKsZB3xZxvwV73+xaacYMWzTTluzwvrUbyyHlHLiduRZdn/9ThcD+GqPuaDtm74m7fjPka8n+D63DBOhUMi84h9HP8jYmGDARD0EFpr+yNKeMJ2vwACFyAPbQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c1b4e047c31f0bd0f55df3cc05013104</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:48:56</sys_created_on>
+        <sys_id>89826c03c31f0bd0f55df3cc050131f3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:30</sys_updated_on>
+        <ui_id>072d8346-483b-4bc1-b2e9-707c725121bd</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V22obMRD9laDnZdlLbBq/hZbQQttAkualDYtWmrVFtZKiix3X+N872otjGpuakMe8WWekmXPOnsEbooM3wbs7femcmCsy+/mQEKEihr83RHAyI01Gm/yC5awspmWRZcWH87yelnVe8JICLUlCFG0BbzKtuPBCq6oDErKkMsTCZ+08yLMbeAzCAscKF85Iur4/eoEthOQWBk6GWuzowZLZ5p+SXxuoJK1BYp9bb4Wa4/NTmY8PP47Uz752yHFNcR7ibpykLY+08iwh8ORBcaQ/a6h0kJCWKk69tusdYoHyayWfgYVQHtuRePnJiT/Yu5hM4sUGUCODvrg7VoNzPcwWWjC4NpFgj3hay+EN0zK06nuvI3oODQ3Sj54jEhz2AxNJRxYDpeZ2oVc348AroTqBQ1FqRuXuRD3aUAcPLn4YkNBio6qlxqA5lbF6KbrHyKVN5xIPaSP1CofGvKWUReIpekTTK8Q/dfA9tSKq+IZt8HFPs6ZOsKrLJrbzFiVsO1uqxxAJ9QIHKVXvBl5wzArjL3HOEgbW22QI9gWdNJM8mxyOx/n0QAj2Mr3Z/DBIHHiVpyxY9Mqnzoc4Pl10ca7sEOft9lfIspJ3rF9k//WN3mJHTjDhxY4cNubIYhT/WYyo5cS9yLLsfTH2F0O4qg/4oK0b/uq9eIjh7ie4PjccmHBI5C5iX8b/hVhYYwAE24dW2v6OEp6x7V82sXNJYQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0722accfc3db0bd0f55df3cc0501319e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:38</sys_created_on>
+        <sys_id>8232e003c31f0bd0f55df3cc050131eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:47:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0722accfc3db0bd0f55df3cc0501319e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:38</sys_created_on>
+        <sys_id>86322403c31f0bd0f55df3cc05013110</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:47:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0722accfc3db0bd0f55df3cc0501319e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:47:38</sys_created_on>
+        <sys_id>86322403c31f0bd0f55df3cc05013174</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:47:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0722accfc3db0bd0f55df3cc0501319e"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Hostel or Transport Request</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>create_service_request_after_payment</internal_name>
+        <label_cache>[{"name":"Updated_1.current.student","label":"Trigger - Record Updated➛Fee Management Record➛Student | student","reference":"x_2132473_smart_1_student_master","reference_display":"Student Master","type":"reference","base_type":"reference","parent_table_name":"x_2132473_smart_1_fee_management","column_name":"student","usedInstances":{"4eed5a1b-2855-44d3-a5ad-ac9f528c21fa":["student"],"37bac775-bfe5-4a51-8322-c81812fcba6e":["student"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Fee Management Record","reference":"x_2132473_smart_1_fee_management","reference_display":"Fee Management","type":"reference","base_type":"reference","usedInstances":{"4eed5a1b-2855-44d3-a5ad-ac9f528c21fa":["student"],"37bac775-bfe5-4a51-8322-c81812fcba6e":["student"]},"attributes":{}},{"name":"Updated_1.current.student.hostel_required","label":"Trigger - Record Updated➛Fee Management Record➛Student | student➛Hostel Required","reference":"","reference_display":"Hostel Required","type":"boolean","base_type":"boolean","parent_table_name":"x_2132473_smart_1_student_master","column_name":"hostel_required","usedInstances":{"072d8346-483b-4bc1-b2e9-707c725121bd":["condition"]}},{"name":"Updated_1.current.student.transport_required","label":"Trigger - Record Updated➛Fee Management Record➛Student | student➛Transport Required","reference":"","reference_display":"Transport Required","type":"boolean","base_type":"boolean","parent_table_name":"x_2132473_smart_1_student_master","column_name":"transport_required","usedInstances":{"1466e088-bbac-4f9b-8ce9-403091311e6d":["condition"]}}]</label_cache>
+        <master>true</master>
+        <name>Create Service Request After Payment</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Create Service Request After Payment">0722accfc3db0bd0f55df3cc0501319e</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d5b4e047c31f0bd0f55df3cc05013166</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:31</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d5b4e047c31f0bd0f55df3cc05013166^sys_idNOT IN15b4e047c31f0bd0f55df3cc05013167"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d5b4e047c31f0bd0f55df3cc05013166</id>
+        <name>Create Service Request After Payment</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:31</sys_created_on>
+        <sys_id>15b4e047c31f0bd0f55df3cc05013167</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:31</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=15b4e047c31f0bd0f55df3cc05013167"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=d5b4e047c31f0bd0f55df3cc05013166^sys_idNOT IN61b4e047c31f0bd0f55df3cc05013194,99b4e047c31f0bd0f55df3cc05013168,edb4e047c31f0bd0f55df3cc0501317a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Create Service Request After Payment">d5b4e047c31f0bd0f55df3cc05013166</model>
+        <model_id>d5b4e047c31f0bd0f55df3cc05013166</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d5b4e047c31f0bd0f55df3cc05013166</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:31</sys_created_on>
+        <sys_id>61b4e047c31f0bd0f55df3cc05013194</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=61b4e047c31f0bd0f55df3cc05013194"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Create Service Request After Payment">d5b4e047c31f0bd0f55df3cc05013166</model>
+        <model_id>d5b4e047c31f0bd0f55df3cc05013166</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d5b4e047c31f0bd0f55df3cc05013166</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:31</sys_created_on>
+        <sys_id>99b4e047c31f0bd0f55df3cc05013168</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=99b4e047c31f0bd0f55df3cc05013168"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Create Service Request After Payment">d5b4e047c31f0bd0f55df3cc05013166</model>
+        <model_id>d5b4e047c31f0bd0f55df3cc05013166</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d5b4e047c31f0bd0f55df3cc05013166</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:31</sys_created_on>
+        <sys_id>edb4e047c31f0bd0f55df3cc0501317a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=edb4e047c31f0bd0f55df3cc0501317a"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=d5b4e047c31f0bd0f55df3cc05013166^sys_idNOT IN21b4e047c31f0bd0f55df3cc050131d4"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">d5b4e047c31f0bd0f55df3cc05013166</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:32</sys_created_on>
+        <sys_id>21b4e047c31f0bd0f55df3cc050131d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=d5b4e047c31f0bd0f55df3cc05013166^sys_idNOT IN2db4e047c31f0bd0f55df3cc050131d1,a1b4e047c31f0bd0f55df3cc050131d1"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">d5b4e047c31f0bd0f55df3cc05013166</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>1466e088-bbac-4f9b-8ce9-403091311e6d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:32</sys_created_on>
+        <sys_id>2db4e047c31f0bd0f55df3cc050131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <ui_id>37bac775-bfe5-4a51-8322-c81812fcba6e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUTW/bMAz9K4XOhmHHWdbmNrTIaWuBdsulaw3GohMBsuzqI00W5L+PsuQ06BpsA3qpTxb5SL5H6/l+xwRnUzbJMft0kU+qIi+KUZaNzsf5YlIs8hEvAHHMEqagQUJaWEgs+0PC1iCdD27KUV6Mxp+L0jSgbZmXVoMyXUvvGp8cGktoLkwnYTuPRd8HyNntAVKthOQaFZvePySsA01zLGo23b1K/StrCQuUfpinfUKF3XZvxr4e155dh0SrueeTJQw3FhVHIlKDNJiwBhQH2+otm1rtKKAR+I2S2wNiJZSlhsxjN0b8orHnmcfVSMoqDLnDsYwbC+H6CizcUefKOh2h1aoVFZqwE441OGkvj2MBcNNZ0apQ0suM1a10jboOK2GHBsMHoogzRAI7r9MzjzLqu1X7fDuwnAnVryQmZVuBPJzAWi0Wzno+O4YSG2pUNtB1Qi3LTrdr0RcTlyZdSjqktWyfaagRS5VC5YmntFZIZxS/6sNz0MKr+EZtqHifMLM1lxKMedFCSyyfnGcSlEUNZViDL6m06OwXGrDGSHefDHbgmF2cvFj54uUi9Q4wR1Yw1vk5P12WFXy3+9ERd+RlnlZO07psGgH7/aOxYJ0JyOgSuk1/+OQdOv6nrf6ufrDVTKDk5o11DJ7ChqRYLMN6XvkqJs/mMRm9lb+Xt/JJ1j8fyGFB3Ic32NG/9ITVHn4DmYNH3HsGAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2db4e047c31f0bd0f55df3cc050131d1"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">d5b4e047c31f0bd0f55df3cc05013166</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>072d8346-483b-4bc1-b2e9-707c725121bd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:32</sys_created_on>
+        <sys_id>a1b4e047c31f0bd0f55df3cc050131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <ui_id>4eed5a1b-2855-44d3-a5ad-ac9f528c21fa</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUy24aMRT9FeT1aDTDUJqwixKhLtpESlo2aWJdxnfAkucRPwgU8e+9HhuC0qC2UrsIO9/nOWfu4X7LpGATNs4x+3Cej8siL4phlg3PRvl8XMzzoSgAccQS1kCNVGlhrpD3j4StQDkfXPNhXgxHHwtuatCW53zZGouKa3xyaCyVCmk6BZtZ7PjU5we3h3y5lEpobNjk/iFhHWjaYFGzyfZV6k/xKpijotKvHvAJ/HbTvRn7fNw7uA6JVguPJ0sYri02AglIBcpgwmpoBNhWb9jEakcBjSBuGrU5VCxlY2kg87VrI3/Q2rPM11VIzEoMucOTR7lCuLoCC3c0ubROx9Jy2coSTdBEYAVO2cvjWCi46axsm9DS04zdrXJ1cx0kYYcB+69DEWcIBHaep0ceaVR3y/b5do9yKptekphUbQnq8AJrtZw76/FsGSqsaRCvoetks+CdbleybyYsdbpQ9Egr1T7TUiMXTQqlB56SrJBOKX7Vh2egpWfxhcZQ8y5hZmMuFRjzwoVE5E/OIwnMIgceZPAtpZadvaAFK4xwd8neCAKz85OHlc9fDqm/fXNkAmOd3/PdZVkhtttvHWFHwfO0dJrksmks2O0ej9whNYrQ4i/n0ViwzoRANA/d2S/2+a+7/tKKv1dsb8WpRCXMGxLufYg1kbTIg6SvvBiTg1lMRj/m/8qP+Tjrf+/IlYHcuzfl0f/vCXs+/AS2/I2pqQYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a1b4e047c31f0bd0f55df3cc050131d1"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=d5b4e047c31f0bd0f55df3cc05013166^sys_idNOT IN69b4e047c31f0bd0f55df3cc050131cd,e9b4e047c31f0bd0f55df3cc050131cf"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c1b4e047c31f0bd0f55df3cc05013104</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">d5b4e047c31f0bd0f55df3cc05013166</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:32</sys_created_on>
+        <sys_id>69b4e047c31f0bd0f55df3cc050131cd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <ui_id>072d8346-483b-4bc1-b2e9-707c725121bd</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYBnQdAjNhrfAgdBC6QNkKS5tIGwIimbKCUqfNhxBf97lxJlG3mgTttjb+bscndmxIE7opxtnTV36twYsWjI7NtDRETjMfzdEcHIjFQJVOkZTWmeTfMsSbIPp2k5zcs0YzlwyElEGqg5dlLVMGGFaooeiMgKpPOFj8pYLk9u+KMTmjOsMGFaCZv7NxvoUkimeeDUgsaJlmsy656VjuUooeQSW+cjyZOrHnmbvd20HjdWi2YRzldhyu0IKs08qzSJCH+yvGHIflaBNDwiNTQMrNKbHaI5sOtG7oGlaCyOI775yYifuDCbTHxjxVEi5UNxdyyCcQNcXYAFpOKodTq00qUSlJvBHMYrcNLOD7Gh4br1UocrFko53lbS1c2XwRGyGzB+J0ScQRK89Uo99aCjul2q9c3I8lI0vSuhKBUFuTuBRe9KZz2fjnDJaxxU1NC26GjRarUS/WXkUscLiYe4kmqNS/0bjYF64jEaC/El4hc9fA9aeBWfcQxeHmiWYAQt+veM49AmTrYRMRszl2DMXiS6Wzw6T3GQHMQVgz/+CtWitee4ecWDjm0U4nEGk2qSJpPXn97p9JUHdpCMrvvaohTOijSmTqN7NjbW+fXxsg9FoUMottvvLkly1ut4kaA/H/S+pB0h90XSXrfgPfHKfhMvL+XIdCVJ8j9efx0vYYohFEFbv/wfpuvBR2TYufOaCoPU7jz2afyP8oUNPi5BD6G10j+8qD22/QXo1BEP7QYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">41b4e047c31f0bd0f55df3cc05013108</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Create Service Request After Payment">d5b4e047c31f0bd0f55df3cc05013166</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:32</sys_created_on>
+        <sys_id>e9b4e047c31f0bd0f55df3cc050131cf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <ui_id>1466e088-bbac-4f9b-8ce9-403091311e6d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYBnQdAjNhrfAgcBCqQNkLi5tIGwIimbKEUqfNhxBf97l3rYRpO2DtJjb+bscndmxIFbor1rvLMLfWmtWCoy+/oYEaEChr9bIhiZkSqBKr2gKc2zaZ4lSfbhPC2neZlmLAcOOYmIgppjJ9WKCSe0KjogImuQPhQWBpRttHFnd/zJC8MZFpmwjYTtw5966EpIZvjArAGDcx03ZNb+UjqVqYSSS2ydj1TPbjrk9xrctgm4dUao5XC+Gabcj6A2LLBKk4jwZ8cVQ/azCqTlEalBMXDabPeI4cBulTwAK6EcjiOh+dmKH7gwm0xCY8VRIuV9cX8sBu96uLoCB0jFU+fN0EpXWlBue3MYr8BLNz/G+obbJkjtrzgo5XhbS1+rz70jZD9g/FSIeIskeBOUBuqDjup+pTd3I8troTpXhqLUFOT+BA69K70LfFrCJa9xUFFD06CjRWP0WnSXkUsdLyUe4krqDS4NLzUGGojHaCzE14hfdfADGBFUfMIxeLmnWYIVtOheNY5DmzjZRcRu7VyCtQeR6G7x5APFXvIgruj9CVeoEY27xM1rPujYRUNILmBSTdJk8vrTO5++8sCO8tG2XxqUwlmRxtQbdM/F1vmwPnZjLgoz5GK3++aTJGedlBc5etest+XtBNEv8va6EW8JWfaXkAUpJ2YsSZL/IXt3yIQt+mgM2rrl/zBjjyEo/c6911RYpLYI2Mfx/yoUtvi4BD2GNtp8D6IO2O4nF1YtJ/kGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d5b4e047c31f0bd0f55df3cc05013166</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:31</sys_created_on>
+        <sys_id>25b4e047c31f0bd0f55df3cc0501318f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d5b4e047c31f0bd0f55df3cc05013166</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:31</sys_created_on>
+        <sys_id>69b4e047c31f0bd0f55df3cc0501319b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d5b4e047c31f0bd0f55df3cc05013166</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:31</sys_created_on>
+        <sys_id>91b4e047c31f0bd0f55df3cc05013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_d5b4e047c31f0bd0f55df3cc05013166"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0722accfc3db0bd0f55df3cc0501319e</sys_id>
+        <latest_snapshot>d5b4e047c31f0bd0f55df3cc05013166</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-05-25-2026_06-12-2026_1106.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0722accfc3db0bd0f55df3cc0501319e^sys_idNOT IN75b4e047c31f0bd0f55df3cc050131e7"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"75b4e047c31f0bd0f55df3cc050131e7","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>0722accfc3db0bd0f55df3cc0501319e</plan_id>
+        <snapshot>5ce4a847c31f0bd0f55df3cc0501318f</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 12:58:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>75b4e047c31f0bd0f55df3cc050131e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 12:58:32</sys_updated_on>
+        <trigger display_value="">71b4e047c31f0bd0f55df3cc050131e6</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0722accfc3db0bd0f55df3cc0501319e"/>
+</record_update>

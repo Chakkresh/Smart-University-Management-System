@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description>Smart University Management System application menu</description>
+        <device_type>browser</device_type>
+        <hint/>
+        <name/>
+        <order>100</order>
+        <roles/>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 11:02:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>614dac0ec39f03d0f55df3cc0501310f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Smart University Management System</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_app_application_614dac0ec39f03d0f55df3cc0501310f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 11:02:42</sys_updated_on>
+        <title>Smart University Management System</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</application>
+        <file_path/>
+        <instance_id>4a367b4feb234a14cbdefceacad0cd33</instance_id>
+        <instance_name>dev279884</instance_name>
+        <name>sys_app_application_614dac0ec39f03d0f55df3cc0501310f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description>Smart University Management System application menu</description><device_type>browser</device_type><hint/><name/><order>100</order><roles/><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-14 11:02:42</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>614dac0ec39f03d0f55df3cc0501310f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Smart University Management System</sys_name><sys_overrides/><sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package><sys_policy/><sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope><sys_update_name>sys_app_application_614dac0ec39f03d0f55df3cc0501310f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-14 11:02:42</sys_updated_on><title>Smart University Management System</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-807955405</payload_hash>
+        <record_name>Smart University Management System</record_name>
+        <reverted_from/>
+        <source>2602c4cdc39b0b90f55df3cc050131bd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 11:02:42</sys_created_on>
+        <sys_id>376dac0ec39f03d0f55df3cc050131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a09f9563cd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 11:02:42</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>f36dac0e389f03d0cac3cf351b456a9f</update_guid>
+        <update_guid_history>f36dac0e389f03d0cac3cf351b456a9f:-807955405</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Smart University Management System">66413446c3df03d0f55df3cc050131fa</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 11:19:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>3157ac80e7f24b798e56f80d8ead4659</sys_id>
+        <sys_metadata>614dac0ec39f03d0f55df3cc0501310f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Smart University Management System</sys_name>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_scope_delete display_value="">1b7866ca88d149588eee2e663c987831</sys_scope_delete>
+        <sys_update_name>sys_app_application_614dac0ec39f03d0f55df3cc0501310f</sys_update_name>
+        <sys_update_version display_value="sys_app_application_614dac0ec39f03d0f55df3cc0501310f">376dac0ec39f03d0f55df3cc050131a0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 11:19:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

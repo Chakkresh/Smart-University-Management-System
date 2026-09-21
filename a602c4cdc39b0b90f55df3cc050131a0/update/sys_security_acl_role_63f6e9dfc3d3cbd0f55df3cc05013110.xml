@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-18 12:27:11</sys_created_on>
+        <sys_id>63f6e9dfc3d3cbd0f55df3cc05013110</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2132473_smart_1_student_application.x_2132473_smart_1.Applicant User</sys_name>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_security_acl display_value="x_2132473_smart_1_student_application">a773c881c3db0b90f55df3cc05013156</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_63f6e9dfc3d3cbd0f55df3cc05013110</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-18 12:27:11</sys_updated_on>
+        <sys_user_role display_value="x_2132473_smart_1.Applicant User" name="x_2132473_smart_1.Applicant User">b806e15fc3d3cbd0f55df3cc050131e6</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

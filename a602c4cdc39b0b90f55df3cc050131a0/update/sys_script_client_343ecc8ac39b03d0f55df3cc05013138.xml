@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Leave Dates</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+       var fromdate=g_form.getValue('from_date');
+	   var todate=g_form.getValue('to_date');
+
+	   if(fromdate && todate && fromdate>todate)
+	   {
+		  g_form.addErrorMessage('From date cannot be after to date');
+		  return false;
+	   }
+	   return true;
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 08:50:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>343ecc8ac39b03d0f55df3cc05013138</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Validate Leave Dates</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_script_client_343ecc8ac39b03d0f55df3cc05013138</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 08:52:21</sys_updated_on>
+        <table>x_2132473_smart_1_student_leave_pass_request</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

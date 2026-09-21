@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Academic Information" section_id="8bfb88c1c31f0b90f55df3cc050131f2" sys_domain="global" table="x_2132473_smart_1_student_application" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>previous_qualification</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-11 06:02:44</sys_created_on>
+            <sys_id>1c0c0cc1c31f0b90f55df3cc05013109</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Academic Information" display_value="Academic Information" name="x_2132473_smart_1_student_application" sys_domain="global" view="Default view">8bfb88c1c31f0b90f55df3cc050131f2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-11 06:02:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>course</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-11 06:02:44</sys_created_on>
+            <sys_id>980c0cc1c31f0b90f55df3cc0501310a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Academic Information" display_value="Academic Information" name="x_2132473_smart_1_student_application" sys_domain="global" view="Default view">8bfb88c1c31f0b90f55df3cc050131f2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-11 06:02:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-11 06:02:44</sys_created_on>
+            <sys_id>180c0cc1c31f0b90f55df3cc0501310b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Academic Information" display_value="Academic Information" name="x_2132473_smart_1_student_application" sys_domain="global" view="Default view">8bfb88c1c31f0b90f55df3cc050131f2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-11 06:02:44</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>percentage_cgpa</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-11 06:02:44</sys_created_on>
+            <sys_id>940c0cc1c31f0b90f55df3cc0501310c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Academic Information" display_value="Academic Information" name="x_2132473_smart_1_student_application" sys_domain="global" view="Default view">8bfb88c1c31f0b90f55df3cc050131f2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-11 06:02:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>department</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-11 06:02:44</sys_created_on>
+            <sys_id>140c0cc1c31f0b90f55df3cc0501310d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Academic Information" display_value="Academic Information" name="x_2132473_smart_1_student_application" sys_domain="global" view="Default view">8bfb88c1c31f0b90f55df3cc050131f2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-11 06:02:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Academic Information</caption>
+            <header>false</header>
+            <name>x_2132473_smart_1_student_application</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-11 06:02:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8bfb88c1c31f0b90f55df3cc050131f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2132473_smart_1_student_application</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+            <sys_update_name>sys_ui_section_8bfb88c1c31f0b90f55df3cc050131f2</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-11 06:02:39</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

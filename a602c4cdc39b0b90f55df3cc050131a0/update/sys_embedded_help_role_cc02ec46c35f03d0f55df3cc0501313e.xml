@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_2132473_smart_1.Transport User" name="x_2132473_smart_1.Transport User">ca912046c35f03d0f55df3cc050131ae</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 10:12:46</sys_created_on>
+        <sys_id>cc02ec46c35f03d0f55df3cc0501313e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ca912046c35f03d0f55df3cc050131ae</sys_name>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_embedded_help_role_cc02ec46c35f03d0f55df3cc0501313e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 10:12:46</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

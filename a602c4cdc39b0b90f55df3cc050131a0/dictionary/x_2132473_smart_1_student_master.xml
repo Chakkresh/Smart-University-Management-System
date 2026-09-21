@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="31941445c35f0b90f55df3cc0501318a" label="Student Master" max_length="40" name="x_2132473_smart_1_student_master" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Student ID" max_length="40" name="number" type="string"/>
+        <element label="Phone" max_length="40" name="phone" type="string"/>
+        <element choice="1" label="Department" max_length="255" name="department" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="BT" sequence="6" value="bt"/>
+                <element inactive_on_update="false" label="EEE" sequence="4" value="eee"/>
+                <element inactive_on_update="false" label="AIML" sequence="2" value="aiml"/>
+                <element inactive_on_update="false" label="MECHANICAL" sequence="8" value="mechanical"/>
+                <element inactive_on_update="false" label="ECE" sequence="1" value="ece"/>
+                <element inactive_on_update="false" label="CSE" sequence="0" value="cse"/>
+                <element inactive_on_update="false" label="CIVIL" sequence="7" value="civil"/>
+                <element inactive_on_update="false" label="IT" sequence="5" value="it"/>
+                <element inactive_on_update="false" label="AIDS" sequence="3" value="aids"/>
+            </choice>
+        </element>
+        <element display="true" label="Student Name" max_length="40" name="student_name" type="string"/>
+        <element default="1" label="Year" max_length="40" name="year" type="integer"/>
+        <element choice="1" label="Course" max_length="255" name="course" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="B.Tech" sequence="0" value="b_tech"/>
+                <element inactive_on_update="false" label="B.Sc" sequence="2" value="b_sc"/>
+                <element inactive_on_update="false" label="MCA" sequence="4" value="mca"/>
+                <element inactive_on_update="false" label="MBA" sequence="5" value="mba"/>
+                <element inactive_on_update="false" label="BCA" sequence="3" value="bca"/>
+                <element inactive_on_update="false" label="B.E" sequence="1" value="b_e"/>
+            </choice>
+        </element>
+        <element label="Hostel Required" max_length="40" name="hostel_required" type="boolean"/>
+        <element label="Transport Required" max_length="40" name="transport_required" type="boolean"/>
+        <element label="Student Application" max_length="32" name="student_application" reference="x_2132473_smart_1_student_application" type="reference"/>
+        <element choice="3" default="active" label="Status" max_length="255" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inactive" sequence="1" value="inactive"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+                <element inactive_on_update="false" label="Graduated" sequence="2" value="graduated"/>
+            </choice>
+        </element>
+        <element label="Admission Date" max_length="40" name="admission_date" type="glide_date"/>
+        <element label="Email" max_length="40" name="email" type="string"/>
+        <index name="index">
+            <element name="student_application"/>
+        </index>
+    </element>
+</database>

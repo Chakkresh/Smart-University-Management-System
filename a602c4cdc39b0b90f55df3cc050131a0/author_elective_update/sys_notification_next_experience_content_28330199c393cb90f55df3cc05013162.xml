@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notification_next_experience_content">
+    <sys_notification_next_experience_content action="DELETE">
+        <action_name/>
+        <action_payload/>
+        <active>true</active>
+        <is_default>false</is_default>
+        <message/>
+        <message_heading><![CDATA[Dear Student,
+
+Your application has been submitted successfully to the Smart University Management System (SUMS).
+
+Application Number: ${number}
+Student Name: ${student_name}
+Course:${course}
+Department:${department}
+
+Your application will now be reviewed by the university admission team.
+
+Regards,
+Smart University Management System]]></message_heading>
+        <name>SUMS Application Submitted Content</name>
+        <notification display_value="Application Submitted">401f3851c393cb90f55df3cc050131eb</notification>
+        <route display_value="Next Experience Route">bccd1214533201107cd3ddeeff7b1289</route>
+        <sys_class_name>sys_notification_next_experience_content</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-12 04:47:05</sys_created_on>
+        <sys_id>28330199c393cb90f55df3cc05013162</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SUMS Application Submitted Content</sys_name>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_notification_next_experience_content_28330199c393cb90f55df3cc05013162</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 04:47:05</sys_updated_on>
+        <use_action>false</use_action>
+    </sys_notification_next_experience_content>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</application>
+        <file_path/>
+        <instance_id>4a367b4feb234a14cbdefceacad0cd33</instance_id>
+        <instance_name>dev279884</instance_name>
+        <name>sys_notification_next_experience_content_28330199c393cb90f55df3cc05013162</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_notification_next_experience_content"&gt;&lt;sys_notification_next_experience_content action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;action_payload/&gt;&lt;active&gt;true&lt;/active&gt;&lt;is_default&gt;false&lt;/is_default&gt;&lt;message/&gt;&lt;message_heading&gt;&lt;![CDATA[Dear Student,
+
+Your application has been submitted successfully to the Smart University Management System (SUMS).
+
+Application Number: ${number}
+Student Name: ${student_name}
+Course:${course}
+Department:${department}
+
+Your application will now be reviewed by the university admission team.
+
+Regards,
+Smart University Management System]]&gt;&lt;/message_heading&gt;&lt;name&gt;SUMS Application Submitted Content&lt;/name&gt;&lt;notification display_value="Application Submitted"&gt;401f3851c393cb90f55df3cc050131eb&lt;/notification&gt;&lt;route display_value="Next Experience Route"&gt;bccd1214533201107cd3ddeeff7b1289&lt;/route&gt;&lt;sys_class_name&gt;sys_notification_next_experience_content&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-12 04:47:05&lt;/sys_created_on&gt;&lt;sys_id&gt;28330199c393cb90f55df3cc05013162&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;SUMS Application Submitted Content&lt;/sys_name&gt;&lt;sys_package display_value="Smart University Management System" source="x_2132473_smart_1"&gt;a602c4cdc39b0b90f55df3cc050131a0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Smart University Management System"&gt;a602c4cdc39b0b90f55df3cc050131a0&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_notification_next_experience_content_28330199c393cb90f55df3cc05013162&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-12 04:47:05&lt;/sys_updated_on&gt;&lt;use_action&gt;false&lt;/use_action&gt;&lt;/sys_notification_next_experience_content&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2054904420</payload_hash>
+        <record_name>SUMS Application Submitted Content</record_name>
+        <reverted_from/>
+        <source>2602c4cdc39b0b90f55df3cc050131bd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-12 04:47:05</sys_created_on>
+        <sys_id>7d44811dc393cb90f55df3cc0501310b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a093f0c6800000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 04:47:05</sys_updated_on>
+        <type>Notification Next Experience Content</type>
+        <update_guid>39448599be93cb904b3cdbcf11782540</update_guid>
+        <update_guid_history>39448599be93cb904b3cdbcf11782540:2054904420</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-12 05:37:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_notification_next_experience_content">sys_notification_next_experience_content</sys_db_object>
+        <sys_id>1424fd4d9e7043d793c740c15227a209</sys_id>
+        <sys_metadata>28330199c393cb90f55df3cc05013162</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SUMS Application Submitted Content</sys_name>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_scope_delete display_value="">1b7866ca88d149588eee2e663c987831</sys_scope_delete>
+        <sys_update_name>sys_notification_next_experience_content_28330199c393cb90f55df3cc05013162</sys_update_name>
+        <sys_update_version display_value="sys_notification_next_experience_content_28330199c393cb90f55df3cc05013162">7d44811dc393cb90f55df3cc0501310b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 05:37:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
