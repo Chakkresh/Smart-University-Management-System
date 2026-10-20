@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="006b5b61c3578f90f55df3cc05013150" sys_domain="global" table="x_2132473_smart_1_student_leave_pass_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-13 10:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>006b5b61c3578f90f55df3cc05013155</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2132473_smart_1_student_leave_pass_request" name="x_2132473_smart_1_student_leave_pass_request" sys_domain="global" view="Default view">006b5b61c3578f90f55df3cc05013150</sys_ui_form>
+            <sys_ui_section caption="Request Details" display_value="Request Details" name="x_2132473_smart_1_student_leave_pass_request" sys_domain="global" view="Default view">f5f857e5c3178f90f55df3cc05013136</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-13 10:25:43</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-13 10:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>086b5b61c3578f90f55df3cc05013156</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2132473_smart_1_student_leave_pass_request" name="x_2132473_smart_1_student_leave_pass_request" sys_domain="global" view="Default view">006b5b61c3578f90f55df3cc05013150</sys_ui_form>
+            <sys_ui_section caption="Request Information" display_value="Request Information" name="x_2132473_smart_1_student_leave_pass_request" sys_domain="global" view="Default view">4c6b5b61c3578f90f55df3cc0501314c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-13 10:25:43</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-13 10:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>846b5b61c3578f90f55df3cc0501315d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2132473_smart_1_student_leave_pass_request" name="x_2132473_smart_1_student_leave_pass_request" sys_domain="global" view="Default view">006b5b61c3578f90f55df3cc05013150</sys_ui_form>
+            <sys_ui_section caption="Approval" display_value="Approval" name="x_2132473_smart_1_student_leave_pass_request" sys_domain="global" view="Default view">086b5b61c3578f90f55df3cc0501314e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-13 10:25:43</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2132473_smart_1_student_leave_pass_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-13 10:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>006b5b61c3578f90f55df3cc05013150</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2132473_smart_1_student_leave_pass_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+            <sys_update_name>sys_ui_form_sections_006b5b61c3578f90f55df3cc05013150</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-13 10:25:43</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

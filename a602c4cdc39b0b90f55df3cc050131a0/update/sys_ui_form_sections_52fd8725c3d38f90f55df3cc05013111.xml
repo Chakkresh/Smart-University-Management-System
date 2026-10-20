@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="52fd8725c3d38f90f55df3cc05013111" sys_domain="global" table="x_2132473_smart_1_transport_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-13 09:27:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>96fd8725c3d38f90f55df3cc05013116</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2132473_smart_1_transport_request" name="x_2132473_smart_1_transport_request" sys_domain="global" view="Default view">52fd8725c3d38f90f55df3cc05013111</sys_ui_form>
+            <sys_ui_section caption="Transport Request Details" display_value="Transport Request Details" name="x_2132473_smart_1_transport_request" sys_domain="global" view="Default view">ee9d9511c397cb90f55df3cc050131ad</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-13 09:27:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-13 09:27:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9efd8725c3d38f90f55df3cc05013117</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2132473_smart_1_transport_request" name="x_2132473_smart_1_transport_request" sys_domain="global" view="Default view">52fd8725c3d38f90f55df3cc05013111</sys_ui_form>
+            <sys_ui_section caption="Transport Allocation" display_value="Transport Allocation" name="x_2132473_smart_1_transport_request" sys_domain="global" view="Default view">12fd8725c3d38f90f55df3cc05013101</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-13 09:27:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-13 09:27:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>22fd8725c3d38f90f55df3cc05013144</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2132473_smart_1_transport_request" name="x_2132473_smart_1_transport_request" sys_domain="global" view="Default view">52fd8725c3d38f90f55df3cc05013111</sys_ui_form>
+            <sys_ui_section caption="Remarks" display_value="Remarks" name="x_2132473_smart_1_transport_request" sys_domain="global" view="Default view">dafd8725c3d38f90f55df3cc0501310f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-13 09:27:10</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2132473_smart_1_transport_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-13 09:27:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>52fd8725c3d38f90f55df3cc05013111</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2132473_smart_1_transport_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+            <sys_update_name>sys_ui_form_sections_52fd8725c3d38f90f55df3cc05013111</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-13 09:27:10</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

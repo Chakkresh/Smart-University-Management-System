@@ -1,0 +1,1604 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=406150000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Automates the admission approval process and creates a Student Master record for approved student applications.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>admission_approval</internal_name>
+        <label_cache>[{"name":"{{static.5d7c1016c31f83d0f55df3cc05013147}}","label":"SUMS Admission Officer","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"9e4295e5-0414-4d3a-9311-b09674bbff48":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Student Application Record","reference":"x_2132473_smart_1_student_application","reference_display":"Student Application","type":"reference","base_type":"reference","usedInstances":{"9e4295e5-0414-4d3a-9311-b09674bbff48":["record"],"3f17d621-e643-486f-a685-dd2948556faa":["student_name","email","phone","student_application"],"2d46a2d3-0fd0-4368-9c30-6382c5aeca0f":["record",null]},"attributes":{}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"9e4295e5-0414-4d3a-9311-b09674bbff48":["approval_conditions"]}},{"name":"9e4295e5-0414-4d3a-9311-b09674bbff48.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"aafed723-6caf-471a-9bd3-aee9e2a3e34a":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.student_name","label":"Trigger - Record Updated➛Student Application Record➛Student Name","reference":"","reference_display":"Student Name","type":"string","base_type":"string","parent_table_name":"x_2132473_smart_1_student_application","column_name":"student_name","usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["student_name"],"2d46a2d3-0fd0-4368-9c30-6382c5aeca0f":[null],"215ec1f1-e276-4860-939c-76daeca0e253":[null],"af3e1252-cb75-421f-9e7f-0f11f23ebe86":[null]}},{"name":"Updated_1.current.email","label":"Trigger - Record Updated➛Student Application Record➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"x_2132473_smart_1_student_application","column_name":"email","usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["email"],"2d46a2d3-0fd0-4368-9c30-6382c5aeca0f":["record","ah_to"],"215ec1f1-e276-4860-939c-76daeca0e253":["ah_to"],"af3e1252-cb75-421f-9e7f-0f11f23ebe86":["ah_to"]}},{"name":"Updated_1.current.phone_number","label":"Trigger - Record Updated➛Student Application Record➛Phone Number","reference":"","reference_display":"Phone Number","type":"string","base_type":"string","parent_table_name":"x_2132473_smart_1_student_application","column_name":"phone_number","usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["phone"]}},{"name":"Updated_1.current.course","label":"Trigger - Record Updated➛Student Application Record➛Course","reference":"","reference_display":"Course","type":"choice","base_type":"choice","parent_table_name":"x_2132473_smart_1_student_application","column_name":"course","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"B.Tech"}},"label":"B.Tech","sequence":0.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"B.Tech","missing":false,"value":"b_tech"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"B.E"}},"label":"B.E","sequence":1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"B.E","missing":false,"value":"b_e"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"B.Sc"}},"label":"B.Sc","sequence":2.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"B.Sc","missing":false,"value":"b_sc"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"BCA"}},"label":"BCA","sequence":3.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"BCA","missing":false,"value":"bca"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"MBA"}},"label":"MBA","sequence":4.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"MBA","missing":false,"value":"mba"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"MCA"}},"label":"MCA","sequence":5.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"MCA","missing":false,"value":"mca"}],"usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["course"]}},{"name":"Updated_1.current.department","label":"Trigger - Record Updated➛Student Application Record➛Department","reference":"","reference_display":"Department","type":"choice","base_type":"choice","parent_table_name":"x_2132473_smart_1_student_application","column_name":"department","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"CSE"}},"label":"CSE","sequence":0.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"CSE","missing":false,"value":"cse"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"ECE"}},"label":"ECE","sequence":1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"ECE","missing":false,"value":"ece"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"IT"}},"label":"IT","sequence":2.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"IT","missing":false,"value":"it"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"AIML"}},"label":"AIML","sequence":3.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"AIML","missing":false,"value":"aiml"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"AIDS"}},"label":"AIDS","sequence":4.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"AIDS","missing":false,"value":"aids"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"EEE"}},"label":"EEE","sequence":5.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"EEE","missing":false,"value":"eee"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"BT"}},"label":"BT","sequence":6.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"BT","missing":false,"value":"bt"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"CIVIL"}},"label":"CIVIL","sequence":7.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"CIVIL","missing":false,"value":"civil"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"MECHANICAL"}},"label":"MECHANICAL","sequence":8.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"MECHANICAL","missing":false,"value":"mechanical"}],"usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["department"]}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["admission_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.current.student_type","label":"Trigger - Record Updated➛Student Application Record➛Student Type","reference":"","reference_display":"Student Type","type":"choice","base_type":"choice","parent_table_name":"x_2132473_smart_1_student_application","column_name":"student_type","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"Hosteller"}},"label":"Hosteller","sequence":0.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"Hosteller","missing":false,"value":"hosteller"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"Day Scholar"}},"label":"Day Scholar","sequence":1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"Day Scholar","missing":false,"value":"day_scholar"}],"usedInstances":{"2e3b2319-4565-4d8f-a3fa-334d8d3ccab5":["condition"],"71b06681-d19a-4507-a08c-7eddc4205b8f":["condition"]}},{"name":"3f17d621-e643-486f-a685-dd2948556faa.record","label":"3 - Create Record➛Student Master Record","reference":"x_2132473_smart_1_student_master","reference_display":"Student Master","type":"reference","base_type":"reference","usedInstances":{"cc554528-1a0d-4688-a626-2ebed100b571":["record"],"b8077c9a-87b1-4406-ba56-91505cc1cfa1":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Student Application Record➛Application Number","reference":"","reference_display":"Application Number","type":"string","base_type":"string","parent_table_name":"x_2132473_smart_1_student_application","column_name":"number","usedInstances":{"2d46a2d3-0fd0-4368-9c30-6382c5aeca0f":[null],"215ec1f1-e276-4860-939c-76daeca0e253":[null],"af3e1252-cb75-421f-9e7f-0f11f23ebe86":[null]}},{"name":"{{static.56f1e4dec31f83d0f55df3cc05013148}}","label":"SUMS Admission Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"9e4295e5-0414-4d3a-9311-b09674bbff48":["approval_conditions"]}}]</label_cache>
+        <master_snapshot>53dead49c31b4b90f55df3cc0501311e</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Admission Approval</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>27a1352ac39747d0f55df3cc0501310c</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:28:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7854a905c3d74b90f55df3cc050131bc</sys_id>
+        <sys_mod_count>64</sys_mod_count>
+        <sys_name>Admission Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_hub_flow_7854a905c3d74b90f55df3cc050131bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:51</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>0cb1352ac39747d0f55df3cc050131a7</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_2132473_smart_1_student_application">admission_status=documents_verified<item display_value="Documents Verified" endquery="false" field="admission_status" goto="false" newquery="false" operator="=" or="false" value="documents_verified"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-16 05:17:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>27a1352ac39747d0f55df3cc0501310c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:51</sys_updated_on>
+        <table>x_2132473_smart_1_student_application</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>7854a905c3d74b90f55df3cc050131bc</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-16 05:17:51</sys_created_on>
+        <sys_id>23a1352ac39747d0f55df3cc0501310d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:51</sys_updated_on>
+        <trigger display_value="">27a1352ac39747d0f55df3cc0501310c</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=7854a905c3d74b90f55df3cc050131bc^sys_idNOT IN23a1352ac39747d0f55df3cc0501310d"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7854a905c3d74b90f55df3cc050131bc^sys_idNOT IN7054a905c3d74b90f55df3cc050131be"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7854a905c3d74b90f55df3cc050131bc</id>
+        <name>Admission Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:28:37</sys_created_on>
+        <sys_id>7054a905c3d74b90f55df3cc050131be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 12:28:37</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7054a905c3d74b90f55df3cc050131be"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7854a905c3d74b90f55df3cc050131bc^sys_idNOT IN37742145c3d74b90f55df3cc050131be,7b742145c3d74b90f55df3cc050131a5,af742145c3d74b90f55df3cc05013175"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</model>
+        <model_id>7854a905c3d74b90f55df3cc050131bc</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7854a905c3d74b90f55df3cc050131bc</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:29:21</sys_created_on>
+        <sys_id>37742145c3d74b90f55df3cc050131be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 12:29:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=37742145c3d74b90f55df3cc050131be"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</model>
+        <model_id>7854a905c3d74b90f55df3cc050131bc</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7854a905c3d74b90f55df3cc050131bc</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:29:21</sys_created_on>
+        <sys_id>7b742145c3d74b90f55df3cc050131a5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7b742145c3d74b90f55df3cc050131a5"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</model>
+        <model_id>7854a905c3d74b90f55df3cc050131bc</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7854a905c3d74b90f55df3cc050131bc</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:29:21</sys_created_on>
+        <sys_id>af742145c3d74b90f55df3cc05013175</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=af742145c3d74b90f55df3cc05013175"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=7854a905c3d74b90f55df3cc050131bc^sys_idNOT IN1b74a905c3d74b90f55df3cc050131b0"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:29:20</sys_created_on>
+        <sys_id>1b74a905c3d74b90f55df3cc050131b0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 03:51:04</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9Va227bOBD9FUFPu4C70MWXOPuUzWUbIE0A2+0+dAuBIimbWIlyJUqpW/Tfd6iLLesWO5Jb96WpSYo8M3PmzNDyx2+qi2zqqpfqAtkuVQcq44IGHLmLzZrCsJDDFkeenPMQJ0j4wUa9FEFEB6oT+N6CemsXCVjsIDeEQT8gNFAv9YEaIzei8014T2AneD7ZJttTzabh8xfL0E1jODGt0EOBsHQrFBGhXFhovXYZRoL5HNYTFsJJmw/ZY/N0kXK1twivmEsCytXLj58G6hoFcKaQeL6VppgEpROCdINq2AQEhqYZF0PdHpu2bhATUXQBG5YdVDJC1Php5wH6RVBOKNk6p+LCgCLyxN1NYcWXkH2FPS80OetQQIxp6sDtRyvzRTqMVz7D9GmduCAZSdGlk74befwxRS29SB0UuSL3IoxEIexH1xIoF1scznzlP8/yA+8YT2zKJl0fI3f7CQkRMDsSNJRudpgLDrdSj4R+FCToZ7fXT7Mb65+rxfXb25k1u50vZvfXi9sb9Xtil/U5kjumCDMsVmrO923o7xh1Zdh45NmAZqCGOGBrcYUFi3MCfh/sSH3tc8IyYpSIjfOpcJ/YufVtzNa0Rm7jwok5vxHxWBjCGPAaiSj8N9I0kxAfRx4YGVoxDZjDgCTHste2p4hQ1MDe8aTA3qInaqCKGqcUrW3jcTbSTOShpv0kKmcq9Vomez6h7s1uOxUml0vgNuPrSEgfPSMZQOFbiBCr4D25NJJSkDvO8tc0kA6Tcx+uHq7fXj3+fTv/M/t7N3t6l/9/8fRiSqQ+qebFyxkRRBy2sLbxrOZFEoBtJB5YCIZ/hKye089RGr43IGxO7vTkBFjuPGQnzCKu+MAD+EfBURBIic7F0rn30DILFWzoUiwKnHLeh8VP72TS8GXBiCYMma9LELanA1WV3OAUStgRy6c+JaMakrjk21LhO1onxpjoQ3sy1iZSJXTNtB1dm2gj5BBT06ZmQSeqYBpRihJhetSL49QiTAjqHsC/smMzyFoxQw4iT7zPvNx0SYxMlK77gab3BM2Q0Eriah6lrlsypsM3+5xsM63n/gKRGMETJLfxkP7hAFV0XP8ZhL27ItoI/7cM/IiTsibJIxTGld0K5bfMnb+fTh0dP6DtePZXnJMu7oKybab4pgdFHFJMJuPhWAMhNEED7dF0amNkOM5kPKEaKSniDkYttjNWwhcoF9dxtkkVa+kS17HsCD3sALCijUcD7K6KGR1rNTGd+zXU73lFuQVQA8uV+lYRwaXLCM3n+s3xytHxLqu75rnpXJDRaDLBE7gdQZ47Q2ojfWiM0HQyNum4lOcVKG0wRY1nTnhnCjdhcnyDBrxPp87rq4BTkjWkQsjS07lec2hrky1QemahSMrYKImy+IHy6PM397t1ypwml/rTFe5DQMmwKz8Ule2LVaWRACR/wfgeEtmeNvjs7O5fJUbF+7Z27jYuzOmIOGa9Ck2MOhXagWmGeaZ9x4FZEzfmX10Dcijr49rkaewYXkHcEjmKrURLr9OXU/TenWKczilm5/4qz8DGS+drwP5CVS5pOHosdRICtXynqOA3vgITCpypMEfJvuOkRLE3ilhR8LALfTWcr0gwXaW7pbJUkW35/VNxpX18peDBsJI1ZOdXy0q86ff2jJ2pTaZmQ1c9au6qm4taafpMK9vRmRLXJV5reTtu3/KetQWuQNR9HhxYunq1ur5+dbO6toK9ZHX32tR2969Bcf5VR4JepGHoXmt8jkvXFnzCV0ARZzBu4RXiy/T1Tn7uHUSBIrxS0iVKuuSE1cJ9RptQLVcxYLhMouy7cRiAdOKp2J0ICI1psKl4Qg4q0ZrIwvLDC1fLb0KyN6uhCODJ5WYv23EfL8GwPh0ZJrnApj41qz/10AtFaz8PmhE2VqkXfvnRVKVWLHnLXDg+i5dgHk00cfuKWfGQwCsaDhQIavLiJZFMFoQiWf2H2uN1DtNqOOqKWGOqxU1Z2lgUWtIlLidaXRWo4XpcyotiHWi9uLWYr/divtGH+ebrzB92LoN5ftbWwcx7/da+15a6T/8D6H3DMPAmAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7854a905c3d74b90f55df3cc050131bc^sys_idNOT IN258b21c1c31b4b90f55df3cc0501311f,2945e149c3974b90f55df3cc0501316d,77372989c3d74b90f55df3cc0501311f,83a925cdc3d74b90f55df3cc050131be"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>71b06681-d19a-4507-a08c-7eddc4205b8f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:00:04</sys_created_on>
+        <sys_id>258b21c1c31b4b90f55df3cc0501311f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 06:38:19</sys_updated_on>
+        <ui_id>b8077c9a-87b1-4406-ba56-91505cc1cfa1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy07jMBT9lcrrtsqroXQ3okIaiYcEIzYzKLqNb8CS4wTbATpV/32uY6dUgHhIbNBkd1/2OSf3JL83THC2YBnyKD6M8zKN0zSJomSexas8XcUJTwExZmOmoEbq1Fg2mlN8D7Jzic0mreIDnifxBPMsnWTzvJpAPp9NOE8Os/lsllcAUz+33dIkF6aVsL4KB1CmvBWSa1Rs8ft6zFrQdJdFzRabZ6WPgpWwQkmtFwPa5+jtunUxb8quRmULMSRPwuQyVEY/l1ShIQcnjsYMHy0qjgSkAmlwzGpQHGyj12xhdUcJjcDPlVzvOm6Fsp5oDY9G/KWbs8j1VUjMyiDCLiyCQD5dLcHCJZ1c2k7v9GpEicZrwrGCTtqj/ZxvOG+taJQfsbCSw3Qju1qdeUXY7oC999EZAoGt4+mQe1rV5W3zcDGAPBaqlyRQlE0JcheBtVqsOuvgbBhK7DWuoW2Fuila3dyLfpig1NMbScG0ks0D3WnEjZpC6XBPSVWYHlN+2aevQAtH4pSOoeHtmJm1OZJgzBMV0rC46xwSTyxQKHoVegmKfhPccKlFa3/QVfcYgG/HwQ6r2VsbVh4+LdTemU+WeCySOE2yg7QwNWhbxIWxHfcSGLfXLzxw6euj06H+OUd8AO/giF/9HryOP5jiRe5kf3Z05gvBErMvs8T8O1ki0Pj2nnjPCVHy5rd2b5P65Td7LrAalGkb2n+Nd53QyP90UZRytxEvHfBO9+f88AHUgx+OBUpuXqExmAFrgmmx8LSeGSIUR1ehuPtPfJkr4jzqn2/kjf/md3H9DywmmJA/CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=258b21c1c31b4b90f55df3cc0501311f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:32:45</sys_created_on>
+        <sys_id>2945e149c3974b90f55df3cc0501316d</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 06:38:19</sys_updated_on>
+        <ui_id>9e4295e5-0414-4d3a-9311-b09674bbff48</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9K1GeKesQkgbe0KBKs9qdkUo7L6WKjH1TPDIJ9UenLOK/j+M4kAJlYJc+dDsvSL6+1z73cE7s5G7pM+r3/csk60Cv10GTAKEQoSQiKAlhEl7GlyEmyG/5OZ6ByRRACkHN+AlzXQaWy9s5xQpoGrSJFgJytVqZecrknOPFN5dmImTKODXzfv/uvuXPsTArKhB+f7k1dSwkjifATep1jWkbo1rMyzEtiJ4ZXCmrg3+5yqGb8T4PzYwpKuGglg/PCnIKBkeGuYSWP8O5abIQC7+vhDYBAZh+zflinTFluar6nOFnyf4xG4edMi8D0xhxHKyHqeOnCmdDrPDIrEyUFmu6CkZAVpRQyLDm6lMzViV8nStW5FWJwhNeVxdcz/IvFSH+eoHG36GlAQHzss8SedVWNpoWP65rkFcst4y4FnlBMF+PsFKCTbQq4Sx94GApnuH5nOUP6VwUT8wWGyiz9gM3g3bGix9mT8ke8jYmJe62YRW3r0x8aMPfsGBlE3+bZUzxquXLhfzEsZSbVgyH6aMukVSNuRZSy0JFQVlHBJurgdnlCRzmVcvJfUIOaotspFQtt1H7c9oJwk73MkzlDAuVBqlU2u5uAHNGsP0zdtQ/qpK8wYuk0wxxBOjaEDcO9VYTzg52mNq5l26wZd6XasKZIThsBhfZuKGS0R4zJOgdmcG19e7d8CsjQDcOI/NzmYUo6AQogThJSA9hksRx1A03GjIITA+Yp+avlla9tSUGdMakNOi9OscT8KiZAOplhfDUFDxnEq9hEg9nRute/Wz2nkCwzM21dx30RrucZsEj6KotOKhRXtd8vUqks6U0Asoftiw5qoPOjp0T7fj64RTEH8mQmt1ssVxFdnh+G+eW293m7FHD51JHcWcS91BCL2iGJhfdJIwuMAF0AXEQQURjEgXhG7gdBYdOEJrsEWnGgDdve7i2oTn3sNJy16h7Mk4z2REod0x25WC+Bt9ZzA73nXy2fuvkO5/VEoTek9c+0k2QHBQbNA7A74UW+R5HnOFV5wgQteL/rFBsC34b3L/Re/hb7/9/vXejg1JrvDSsn6GkyCkrEcvmpc/OgryG70CUHOSL27vlsnziM9KO4iyALgUSBlkSUpRFEc1CQlCEgjDoJqvV/Z4L3n9f8TTXHUHF+gOD5iB/RY3z3OZ+54qavtvcCt2k8173XJ8c3pn1Psp7Fjmotay30RbVhiCsmt8clmO/gj32+2M/L3IY+62xX2alpbhs2GQYcOsJG1uuqrEW2JUHjeGmluKFtJmSTIEaZdroi0hqreDi5/i8dwQjtfuGGrxhRckuSfXLU42zYoXtnHgjl2BX+uOGNU++6GwnX/e3+c7xqpTWD9HyWDPPvjM68v4nm2i5+/MWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2945e149c3974b90f55df3cc0501316d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>aafed723-6caf-471a-9bd3-aee9e2a3e34a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:41:23</sys_created_on>
+        <sys_id>77372989c3d74b90f55df3cc0501311f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 06:38:19</sys_updated_on>
+        <ui_id>3f17d621-e643-486f-a685-dd2948556faa</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WTW/bMAz9K4XOhmHHXdbmNrTIaW2BdeulawTaYhIBsuzqo20W5L+Psuw0aJNuA3ZYgeUmvkfxkRTN3K6ZFGzCxjlmH07zcVXkRTHKstHJcV6OizIfiQIQj1nCNNRITAelQt4dEvYAygfjEx/lxej4Y8FtDcbxnFvnBWrHa7AODVGFtK2C1U3vcR3xo4sBr5ZSCYOaTW7vEtaCoQgBmaxfQL+rV0GJiqhfg+AD+t2q3Wv7vOt7dBmBxoigJ0sYPjnUAknIHJTFhNWgBbjGrNjEGU8GgyCutFptGUupHV3IAvfJyh8U9iQLvDlSZhVGbHvkfbmieX4ODq7p5sp501OrZSMrtLEmAufglTvbtUXCVetko6NLl2bv3Shf68tYEra9YOgOWbwlEdiGPIPyPo359bJ5/DKonErdlaQHVVOB2p7AOSNL74KeNUOFdXwPbSv1gremeZCdM2mp04WiQzpXzSMFtXKhU6iC8JTKCumU7Oed+QaMDFlc0DXkvEmYXdkzBdY+50JF5Pc+KImZ9TnwWIbgUhnZuk8U4AF7uZtkGASB2enBh5WXzw+pe/t2ZwiGJx/w7z7LCrFef2spARQ8TytvqGYu3WVtNjOsQarD7A4mWrts9BuXdjDXvi7RELtqvLFv0CNORCoOjWtozGHyM4ccQNTSWmoMD7TXTsZrGv3wCQgW7mSX5JAzNU3JCkJjD8br6OC8jQzoujRbNvSZUNzgvZcGRcS6zs2cAW3bhkLuQ2NNouX1V+h/y/79lv3hYvj1/A6LYSpRCbtnoIetgDW9FSpJHPAXm6EHj256sN8O+d/aDvk4637vaEfE5N79itj5N7B/WQxGEr3Z3P0EozM5TEMJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=77372989c3d74b90f55df3cc0501311f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>2e3b2319-4565-4d8f-a3fa-334d8d3ccab5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:51:59</sys_created_on>
+        <sys_id>83a925cdc3d74b90f55df3cc050131be</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 06:38:19</sys_updated_on>
+        <ui_id>cc554528-1a0d-4688-a626-2ebed100b571</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy2rjMBT9laB1EvyKm2Y3NBQG+oB26KZTzI113QjkRyW5bSbk3+fKkpPQlk4K3YTx7r6kc47vse/XTHA2YwnyIDwN0zwO4zgKgmiahIs0XoQRjwExZENWQYnUqTCvFaf4GWRrE+t1XIQnPI3CEaZJPEqmaTGCdDoZcR6dJtPJJC0Axm5us6FJLnQjYXXnD6BMvhSSK6zY7P5hyBpQdJdBxWbrN6VDwUpYoKTWmx7tW/Rm1diY13lbYmUy0Scv/OTcVwY/51ShIQsnDIYMXw1WHAlIAVLjkJVQcTC1WrGZUS0lFAK/ruRq27EUlXFES3jV4g/dnAS2r0BilnsRtmHmBXLpYg4Gbunk3LRqq1ctctROE44FtNKc7edcw3VjRF25EQML2U/Xsi2rK6cI2x6w9z5aTSCwsTwtckeruF3WLzc9yHNRdZJ4irLOQW4jMEaJRWssnDVDiZ3GJTSNqB6zRtXPohsmKOX4UVIwLmT9Qndq8ViNIbe4x6QqjM8pP+/Sd6CEJXFJx9DwZsj0Sp9J0HpHhTTMnlqLxBHzFLJOhU6CrNsEO5wr0ZgfdNUzeuCbobfDYvLZhuWnu4XaO3NnidcsCuMoOYkzXYIyWZhp03IngbZ7/c4Dt64+uOzrX3PEAXh7R/zq9uBj/N4U73IX+7ODK1fwlph8myWmx2QJT+PoPfEvJwTRp9/avU3qll/vuWBZ0y7LTOFTKxTy320QxNyuw/v1/6z1a044AG/vhHOBkusPCPQ2wJIwGswcoTdW8MXBnS9u/xDf5ocwDbrniFzx3/woHv4CZJLhfzkJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=83a925cdc3d74b90f55df3cc050131be"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=7854a905c3d74b90f55df3cc050131bc^sys_idNOT IN0bea2d41c31b4b90f55df3cc050131cf,8949e18dc3d74b90f55df3cc050131e8,f9c62549c3d74b90f55df3cc0501311f"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f2de6d49c31b4b90f55df3cc0501318b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>aafed723-6caf-471a-9bd3-aee9e2a3e34a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:57:26</sys_created_on>
+        <sys_id>0bea2d41c31b4b90f55df3cc050131cf</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:47</sys_updated_on>
+        <ui_id>71b06681-d19a-4507-a08c-7eddc4205b8f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K8XPxvijCWveykphsK2wdH3ZirmWrhMxWdIkOakX8t935Y80bAkrpY97i86Vzj3n+JBdpFtvWu/u9bVzYqWixbfHOBIqYPR7FyloMFpETCsuvNCq7IE42oBsw+AGuoslW2sJllAunJHQPZwcsrWQ3OK4w4AlJo82Wuz+GPnOYCmhQkkcS2+FWtFzwelUp1BnVyxjRT4v8jTN311m1byospwXgFDQvenh+0nyxcceic96CfsId9MmbXmQlaVxhE8eFUdaXYN0GEcNKA5e2+6AWAR+p+QzsBbKE10ULj858Yu489ksXKyRPDIchodjOaY2wBSXYHhngsAB8VDJ8Q3Tsm3U58FHyBtraKWf8iakdcSHJogOKkZJ9XKtt1+mhbdC9QbHodQM5OEEnmKoWo8ufBiU2BBR2YAxFE5prN6I/jFpaZKVpENSS72lpaE/CbAgPKGMILkl/KaHH8CK4OIT0aAdZVbgBCv7rhGdt2Rh38dS/myDoMHgaKUc0qALjllh/DXt2eCoeh//XdSjju52Xw0JQl5mCWstZeAT59ueNnz7/f57m6YF59CV7lyXX0fyFp2/glk9y9LZ6c5fzk91/kTbzxc9/0fRw6d5Yc/TNP1f9OOiC1cOhR299ctf3fPHUOphgxt6w5EJR0LuA/Zh+t8Og44KINgxtNX2R7DwjO1/A3popEgBBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b2de6d49c31b4b90f55df3cc05013187</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>aafed723-6caf-471a-9bd3-aee9e2a3e34a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:50:12</sys_created_on>
+        <sys_id>8949e18dc3d74b90f55df3cc050131e8</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:47</sys_updated_on>
+        <ui_id>2e3b2319-4565-4d8f-a3fa-334d8d3ccab5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2UW28TMRCF/wra59VqL01E81YVVSABlWjpC1SrWXs2sfDaxpekIcp/Z7yXNIJEoIpH3uIz9pkzs5+yS3TwJnh3r6+cE0uVLL48polQUaPfu0RBh8kiYVpx4YVWdS+kyRpkiIW32nmUEi1pXDgjYftwosRWQnKLo78BSy6eKovdLyW/NVhLaFCSw523Qi3pueB0anNoi0tWsKqcV2Wel68vimZeNUXJK0Co6N708HqK++p9r6Rn54j9SHdTJ215jFXkaYJPHhVHat2CdJgmHSgOXtvtQbEI/FbJZ2EllCe7JF5+cuIHeZezWbzYIs3IcCgejvW4s0FmKy0Y3poYcFA8NHJ8w7QMnfo4zBG3jS0E6adtkxIc+aGJoWOKMVJ7t9KbT1PDG6H6Acei1Azk4QSe1tAEjy5+GJTYkVHdgTG0nNpYvRb9Y8rSZUtJh6yVekNNIzsZsBg8ox1BdkP6m15+ACviFB/IpmchxmzACVb3nJGdtzTCvl9L/T3EQMOA4yj1sA264JgVxl9RnzWOqffp75Ae8bnbfTYUCHldZCxY2oHPnA+9bfz2+/3XkOcVX53n+CUW/4L3S5i1syKfneb9Yn6K9xOkn4e8/APk8bP8JeN5nv+H/Bhy4eoB1nG2vvmLGX+MQA8d3MANRyYcBbmP2rvp/zoWtgSAYMfSRttvcYRnbf8Tx+VgefkFAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fede6d49c31b4b90f55df3cc05013182</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:39:20</sys_created_on>
+        <sys_id>f9c62549c3d74b90f55df3cc0501311f</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:47</sys_updated_on>
+        <ui_id>aafed723-6caf-471a-9bd3-aee9e2a3e34a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4PPjiF/ZU1uwYYCA7YVWItetsKgJToRJkueJafNgvz3Uf5IgzXBhqHH3axHkXyPevQ+MJ1rOmfvzMpaudbB8utDGEjtMfreBxpqDJYBN1pIJ40ueiAMtqA6H1g1TWu2KAgS0jYKdvcvI3wjlWhxrN5ASzUctsFy/1vI7RosFJSoqMCta6VeU7oUdKoYVPGCxzxN5mnCWHKVxeU8LeNEpICQ0r0p8d1E9s3HHgkvqvD9CLdTJ9MKTytmYYBPDrUg+ssKlMUwqEELcKbdHZEWQdxo9QxspHZULvCXn6z8SbWTPPcXKySNHIfg8ViMIxtgvjGS403jCQ6Ig1KNOdyortafBx1+2FhBp9w0bEI6S/Ww8aQ9i5FSdbsxj1+mhtdS9wLHoDIc1PEEjsZQdg6tfxhUWFOhooamoeEU/jFln0xc6mit6BBVyjxSU++cCLgnHtGMILom/H0P30MrvYpPVIaSB5olWMmL3mVUzrUk4dCPpfjReUKDwFFKMUyDLljeysatqM8WR9aH8KVFT9y53y8wSxY55jOWxdksI6/MFmkcz0q2mL/NyrKqsqsIequCKqwDh4fDt46xVMBFa79W2dfYiwXkVR6z/PxeZPNze3FmIy4vQ/KHZfDP95e7wBj7vwynyyBtMZh61NY3/+ddePDGHzrYwTcCubRE5M5jH6a/ug/syACSn0KPpv3uJTxjh1+fw3l6HwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7854a905c3d74b90f55df3cc050131bc^sys_idNOT IN0b4de585c3d74b90f55df3cc050131a0,130ea5c5c31b4b90f55df3cc050131a9,4c777851c353cb90f55df3cc0501312e,4f4de585c3d74b90f55df3cc050131a0,570ea5c5c31b4b90f55df3cc050131a9,874de585c3d74b90f55df3cc0501319f,88777851c353cb90f55df3cc0501312d,b46ea909c31b4b90f55df3cc05013194,c34de585c3d74b90f55df3cc050131a0,f86ea909c31b4b90f55df3cc05013194"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:07:49</sys_created_on>
+        <sys_id>0b4de585c3d74b90f55df3cc050131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:07:49</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c4bfff4d-02f5-4854-8b2f-216720bb801e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.student_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:11:06</sys_created_on>
+        <sys_id>130ea5c5c31b4b90f55df3cc050131a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:11:06</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d5786ede-d0a1-4bea-8ad3-e844bb77be53</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-12 03:50:59</sys_created_on>
+        <sys_id>4c777851c353cb90f55df3cc0501312e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 03:50:59</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>eb79e30c-9238-4a81-a7ba-76f65c026058</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.student_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:07:49</sys_created_on>
+        <sys_id>4f4de585c3d74b90f55df3cc050131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:07:49</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0ae755de-1f8f-4d49-976a-cf35c07148bc</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:11:06</sys_created_on>
+        <sys_id>570ea5c5c31b4b90f55df3cc050131a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:11:06</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>359601f9-c257-4d16-af61-ba6fad40af8f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:07:49</sys_created_on>
+        <sys_id>874de585c3d74b90f55df3cc0501319f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:07:49</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9af54066-3321-4a84-9f18-0e413b4a62fb</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.student_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-12 03:50:59</sys_created_on>
+        <sys_id>88777851c353cb90f55df3cc0501312d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 03:50:59</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>702de2ef-0f28-436d-914c-5ccda2cfa99a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:12:34</sys_created_on>
+        <sys_id>b46ea909c31b4b90f55df3cc05013194</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:12:34</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>48999ac4-e8f4-4634-ac43-a3b2c9d126e2</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:07:49</sys_created_on>
+        <sys_id>c34de585c3d74b90f55df3cc050131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:07:49</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>070ea6bc-805c-4177-b667-bcf0efa00f50</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7854a905c3d74b90f55df3cc050131bc</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:12:34</sys_created_on>
+        <sys_id>f86ea909c31b4b90f55df3cc05013194</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:12:34</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>5d07cab7-3e4d-4380-84c8-f599d6a6018c</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7854a905c3d74b90f55df3cc050131bc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:29:22</sys_created_on>
+        <sys_id>37742145c3d74b90f55df3cc050131c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 12:29:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7854a905c3d74b90f55df3cc050131bc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:29:21</sys_created_on>
+        <sys_id>73742145c3d74b90f55df3cc050131b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 12:29:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7854a905c3d74b90f55df3cc050131bc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 12:29:21</sys_created_on>
+        <sys_id>ff742145c3d74b90f55df3cc050131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 12:29:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7854a905c3d74b90f55df3cc050131bc"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Automates the admission approval process and creates a Student Master record for approved student applications.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>admission_approval</internal_name>
+        <label_cache>[{"name":"{{static.5d7c1016c31f83d0f55df3cc05013147}}","label":"SUMS Admission Officer","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"9e4295e5-0414-4d3a-9311-b09674bbff48":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Student Application Record","reference":"x_2132473_smart_1_student_application","reference_display":"Student Application","type":"reference","base_type":"reference","usedInstances":{"9e4295e5-0414-4d3a-9311-b09674bbff48":["record"],"3f17d621-e643-486f-a685-dd2948556faa":["student_name","email","phone","student_application"],"2d46a2d3-0fd0-4368-9c30-6382c5aeca0f":["record",null]},"attributes":{}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"9e4295e5-0414-4d3a-9311-b09674bbff48":["approval_conditions"]}},{"name":"9e4295e5-0414-4d3a-9311-b09674bbff48.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"aafed723-6caf-471a-9bd3-aee9e2a3e34a":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.student_name","label":"Trigger - Record Updated➛Student Application Record➛Student Name","reference":"","reference_display":"Student Name","type":"string","base_type":"string","parent_table_name":"x_2132473_smart_1_student_application","column_name":"student_name","usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["student_name"],"2d46a2d3-0fd0-4368-9c30-6382c5aeca0f":[null],"215ec1f1-e276-4860-939c-76daeca0e253":[null],"af3e1252-cb75-421f-9e7f-0f11f23ebe86":[null]}},{"name":"Updated_1.current.email","label":"Trigger - Record Updated➛Student Application Record➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"x_2132473_smart_1_student_application","column_name":"email","usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["email"],"2d46a2d3-0fd0-4368-9c30-6382c5aeca0f":["record","ah_to"],"215ec1f1-e276-4860-939c-76daeca0e253":["ah_to"],"af3e1252-cb75-421f-9e7f-0f11f23ebe86":["ah_to"]}},{"name":"Updated_1.current.phone_number","label":"Trigger - Record Updated➛Student Application Record➛Phone Number","reference":"","reference_display":"Phone Number","type":"string","base_type":"string","parent_table_name":"x_2132473_smart_1_student_application","column_name":"phone_number","usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["phone"]}},{"name":"Updated_1.current.course","label":"Trigger - Record Updated➛Student Application Record➛Course","reference":"","reference_display":"Course","type":"choice","base_type":"choice","parent_table_name":"x_2132473_smart_1_student_application","column_name":"course","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"B.Tech"}},"label":"B.Tech","sequence":0.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"B.Tech","missing":false,"value":"b_tech"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"B.E"}},"label":"B.E","sequence":1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"B.E","missing":false,"value":"b_e"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"B.Sc"}},"label":"B.Sc","sequence":2.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"B.Sc","missing":false,"value":"b_sc"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"BCA"}},"label":"BCA","sequence":3.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"BCA","missing":false,"value":"bca"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"MBA"}},"label":"MBA","sequence":4.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"MBA","missing":false,"value":"mba"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"MCA"}},"label":"MCA","sequence":5.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"MCA","missing":false,"value":"mca"}],"usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["course"]}},{"name":"Updated_1.current.department","label":"Trigger - Record Updated➛Student Application Record➛Department","reference":"","reference_display":"Department","type":"choice","base_type":"choice","parent_table_name":"x_2132473_smart_1_student_application","column_name":"department","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"CSE"}},"label":"CSE","sequence":0.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"CSE","missing":false,"value":"cse"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"ECE"}},"label":"ECE","sequence":1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"ECE","missing":false,"value":"ece"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"IT"}},"label":"IT","sequence":2.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"IT","missing":false,"value":"it"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"AIML"}},"label":"AIML","sequence":3.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"AIML","missing":false,"value":"aiml"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"AIDS"}},"label":"AIDS","sequence":4.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"AIDS","missing":false,"value":"aids"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"EEE"}},"label":"EEE","sequence":5.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"EEE","missing":false,"value":"eee"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"BT"}},"label":"BT","sequence":6.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"BT","missing":false,"value":"bt"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"CIVIL"}},"label":"CIVIL","sequence":7.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"CIVIL","missing":false,"value":"civil"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"MECHANICAL"}},"label":"MECHANICAL","sequence":8.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"MECHANICAL","missing":false,"value":"mechanical"}],"usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["department"]}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"3f17d621-e643-486f-a685-dd2948556faa":["admission_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.current.student_type","label":"Trigger - Record Updated➛Student Application Record➛Student Type","reference":"","reference_display":"Student Type","type":"choice","base_type":"choice","parent_table_name":"x_2132473_smart_1_student_application","column_name":"student_type","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"-- None --","missing":false,"value":""},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"Hosteller"}},"label":"Hosteller","sequence":0.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"Hosteller","missing":false,"value":"hosteller"},{"parameters":{"name":"x_2132473_smart_1_student_application","dependent_values":[""],"dependent_values_map":{"":"Day Scholar"}},"label":"Day Scholar","sequence":1.0,"used":false,"selected":false,"reference":false,"image":"","rawLabel":"Day Scholar","missing":false,"value":"day_scholar"}],"usedInstances":{"2e3b2319-4565-4d8f-a3fa-334d8d3ccab5":["condition"],"71b06681-d19a-4507-a08c-7eddc4205b8f":["condition"]}},{"name":"3f17d621-e643-486f-a685-dd2948556faa.record","label":"3 - Create Record➛Student Master Record","reference":"x_2132473_smart_1_student_master","reference_display":"Student Master","type":"reference","base_type":"reference","usedInstances":{"cc554528-1a0d-4688-a626-2ebed100b571":["record"],"b8077c9a-87b1-4406-ba56-91505cc1cfa1":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Student Application Record➛Application Number","reference":"","reference_display":"Application Number","type":"string","base_type":"string","parent_table_name":"x_2132473_smart_1_student_application","column_name":"number","usedInstances":{"2d46a2d3-0fd0-4368-9c30-6382c5aeca0f":[null],"215ec1f1-e276-4860-939c-76daeca0e253":[null],"af3e1252-cb75-421f-9e7f-0f11f23ebe86":[null]}},{"name":"{{static.56f1e4dec31f83d0f55df3cc05013148}}","label":"SUMS Admission Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"9e4295e5-0414-4d3a-9311-b09674bbff48":["approval_conditions"]}}]</label_cache>
+        <master>true</master>
+        <name>Admission Approval</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Admission Approval">7854a905c3d74b90f55df3cc050131bc</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>53dead49c31b4b90f55df3cc0501311e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:50</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=53dead49c31b4b90f55df3cc0501311e^sys_idNOT INdfdead49c31b4b90f55df3cc0501311f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>53dead49c31b4b90f55df3cc0501311e</id>
+        <name>Admission Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:39</sys_created_on>
+        <sys_id>dfdead49c31b4b90f55df3cc0501311f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:39</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=dfdead49c31b4b90f55df3cc0501311f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=53dead49c31b4b90f55df3cc0501311e^sys_idNOT IN57dead49c31b4b90f55df3cc05013138,5fdead49c31b4b90f55df3cc05013144,d7dead49c31b4b90f55df3cc05013121"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</model>
+        <model_id>53dead49c31b4b90f55df3cc0501311e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_53dead49c31b4b90f55df3cc0501311e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:39</sys_created_on>
+        <sys_id>57dead49c31b4b90f55df3cc05013138</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 03:51:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=57dead49c31b4b90f55df3cc05013138"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</model>
+        <model_id>53dead49c31b4b90f55df3cc0501311e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_53dead49c31b4b90f55df3cc0501311e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>5fdead49c31b4b90f55df3cc05013144</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5fdead49c31b4b90f55df3cc05013144"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</model>
+        <model_id>53dead49c31b4b90f55df3cc0501311e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_53dead49c31b4b90f55df3cc0501311e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:39</sys_created_on>
+        <sys_id>d7dead49c31b4b90f55df3cc05013121</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d7dead49c31b4b90f55df3cc05013121"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=53dead49c31b4b90f55df3cc0501311e^sys_idNOT IN67dead49c31b4b90f55df3cc05013190"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>67dead49c31b4b90f55df3cc05013190</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 03:51:07</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9Va227bOBD9FUFPu4C70MWXOPuUzWUbIE0A2+0+dAuBIimbWIlyJUqpW/Tfd6iLLesWO5Jb96WpSYo8M3PmzNDyx2+qi2zqqpfqAtkuVQcq44IGHLmLzZrCsJDDFkeenPMQJ0j4wUa9FEFEB6oT+N6CemsXCVjsIDeEQT8gNFAv9YEaIzei8014T2AneD7ZJttTzabh8xfL0E1jODGt0EOBsHQrFBGhXFhovXYZRoL5HNYTFsJJmw/ZY/N0kXK1twivmEsCytXLj58G6hoFcKaQeL6VppgEpROCdINq2AQEhqYZF0PdHpu2bhATUXQBG5YdVDJC1Php5wH6RVBOKNk6p+LCgCLyxN1NYcWXkH2FPS80OetQQIxp6sDtRyvzRTqMVz7D9GmduCAZSdGlk74befwxRS29SB0UuSL3IoxEIexH1xIoF1scznzlP8/yA+8YT2zKJl0fI3f7CQkRMDsSNJRudpgLDrdSj4R+FCToZ7fXT7Mb65+rxfXb25k1u50vZvfXi9sb9Xtil/U5kjumCDMsVmrO923o7xh1Zdh45NmAZqCGOGBrcYUFi3MCfh/sSH3tc8IyYpSIjfOpcJ/YufVtzNa0Rm7jwok5vxHxWBjCGPAaiSj8N9I0kxAfRx4YGVoxDZjDgCTHste2p4hQ1MDe8aTA3qInaqCKGqcUrW3jcTbSTOShpv0kKmcq9Vomez6h7s1uOxUml0vgNuPrSEgfPSMZQOFbiBCr4D25NJJSkDvO8tc0kA6Tcx+uHq7fXj3+fTv/M/t7N3t6l/9/8fRiSqQ+qebFyxkRRBy2sLbxrOZFEoBtJB5YCIZ/hKye089RGr43IGxO7vTkBFjuPGQnzCKu+MAD+EfBURBIic7F0rn30DILFWzoUiwKnHLeh8VP72TS8GXBiCYMma9LELanA1WV3OAUStgRy6c+JaMakrjk21LhO1onxpjoQ3sy1iZSJXTNtB1dm2gj5BBT06ZmQSeqYBpRihJhetSL49QiTAjqHsC/smMzyFoxQw4iT7zPvNx0SYxMlK77gab3BM2Q0Eriah6lrlsypsM3+5xsM63n/gKRGMETJLfxkP7hAFV0XP8ZhL27ItoI/7cM/IiTsibJIxTGld0K5bfMnb+fTh0dP6DtePZXnJMu7oKybab4pgdFHFJMJuPhWAMhNEED7dF0amNkOM5kPKEaKSniDkYttjNWwhcoF9dxtkkVa+kS17HsCD3sALCijUcD7K6KGR1rNTGd+zXU73lFuQVQA8uV+lYRwaXLCM3n+s3xytHxLqu75rnpXJDRaDLBE7gdQZ47Q2ojfWiM0HQyNum4lOcVKG0wRY1nTnhnCjdhcnyDBrxPp87rq4BTkjWkQsjS07lec2hrky1QemahSMrYKImy+IHy6PM397t1ypwml/rTFe5DQMmwKz8Ule2LVaWRACR/wfgeEtmeNvjs7O5fJUbF+7Z27jYuzOmIOGa9Ck2MOhXagWmGeaZ9x4FZEzfmX10Dcijr49rkaewYXkHcEjmKrURLr9OXU/TenWKczilm5/4qz8DGS+drwP5CVS5pOHosdRICtXynqOA3vgITCpypMEfJvuOkRLE3ilhR8LALfTWcr0gwXaW7pbJUkW35/VNxpX18peDBsJI1ZOdXy0q86ff2jJ2pTaZmQ1c9au6qm4taafpMK9vRmRLXJV5reTtu3/KetQWuQNR9HhxYunq1ur5+dbO6toK9ZHX32tR2969Bcf5VR4JepGHoXmt8jkvXFnzCV0ARZzBu4RXiy/T1Tn7uHUSBIrxS0iVKuuSE1cJ9RptQLVcxYLhMouy7cRiAdOKp2J0ICI1psKl4Qg4q0ZrIwvLDC1fLb0KyN6uhCODJ5WYv23EfL8GwPh0ZJrnApj41qz/10AtFaz8PmhE2VqkXfvnRVKVWLHnLXDg+i5dgHk00cfuKWfGQwCsaDhQIavLiJZFMFoQiWf2H2uN1DtNqOOqKWGOqxU1Z2lgUWtIlLidaXRWo4XpcyotiHWi9uLWYr/divtGH+ebrzB92LoN5ftbWwcx7/da+15a6T/8D6H3DMPAmAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=53dead49c31b4b90f55df3cc0501311e^sys_idNOT IN6bdead49c31b4b90f55df3cc05013186,6bdead49c31b4b90f55df3cc05013188,afdead49c31b4b90f55df3cc05013178,efdead49c31b4b90f55df3cc05013187"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>aafed723-6caf-471a-9bd3-aee9e2a3e34a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>6bdead49c31b4b90f55df3cc05013186</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <ui_id>3f17d621-e643-486f-a685-dd2948556faa</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WTW/bMAz9K4XOhmHHXdbmNrTIaW2BdeulawTaYhIBsuzqo20W5L+Psuw0aJNuA3ZYgeUmvkfxkRTN3K6ZFGzCxjlmH07zcVXkRTHKstHJcV6OizIfiQIQj1nCNNRITAelQt4dEvYAygfjEx/lxej4Y8FtDcbxnFvnBWrHa7AODVGFtK2C1U3vcR3xo4sBr5ZSCYOaTW7vEtaCoQgBmaxfQL+rV0GJiqhfg+AD+t2q3Wv7vOt7dBmBxoigJ0sYPjnUAknIHJTFhNWgBbjGrNjEGU8GgyCutFptGUupHV3IAvfJyh8U9iQLvDlSZhVGbHvkfbmieX4ODq7p5sp501OrZSMrtLEmAufglTvbtUXCVetko6NLl2bv3Shf68tYEra9YOgOWbwlEdiGPIPyPo359bJ5/DKonErdlaQHVVOB2p7AOSNL74KeNUOFdXwPbSv1gremeZCdM2mp04WiQzpXzSMFtXKhU6iC8JTKCumU7Oed+QaMDFlc0DXkvEmYXdkzBdY+50JF5Pc+KImZ9TnwWIbgUhnZuk8U4AF7uZtkGASB2enBh5WXzw+pe/t2ZwiGJx/w7z7LCrFef2spARQ8TytvqGYu3WVtNjOsQarD7A4mWrts9BuXdjDXvi7RELtqvLFv0CNORCoOjWtozGHyM4ccQNTSWmoMD7TXTsZrGv3wCQgW7mSX5JAzNU3JCkJjD8br6OC8jQzoujRbNvSZUNzgvZcGRcS6zs2cAW3bhkLuQ2NNouX1V+h/y/79lv3hYvj1/A6LYSpRCbtnoIetgDW9FSpJHPAXm6EHj256sN8O+d/aDvk4637vaEfE5N79itj5N7B/WQxGEr3Z3P0EozM5TEMJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6bdead49c31b4b90f55df3cc05013186"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>71b06681-d19a-4507-a08c-7eddc4205b8f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>6bdead49c31b4b90f55df3cc05013188</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <ui_id>b8077c9a-87b1-4406-ba56-91505cc1cfa1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy07jMBT9lcrrtsqroXQ3okIaiYcEIzYzKLqNb8CS4wTbATpV/32uY6dUgHhIbNBkd1/2OSf3JL83THC2YBnyKD6M8zKN0zSJomSexas8XcUJTwExZmOmoEbq1Fg2mlN8D7Jzic0mreIDnifxBPMsnWTzvJpAPp9NOE8Os/lsllcAUz+33dIkF6aVsL4KB1CmvBWSa1Rs8ft6zFrQdJdFzRabZ6WPgpWwQkmtFwPa5+jtunUxb8quRmULMSRPwuQyVEY/l1ShIQcnjsYMHy0qjgSkAmlwzGpQHGyj12xhdUcJjcDPlVzvOm6Fsp5oDY9G/KWbs8j1VUjMyiDCLiyCQD5dLcHCJZ1c2k7v9GpEicZrwrGCTtqj/ZxvOG+taJQfsbCSw3Qju1qdeUXY7oC999EZAoGt4+mQe1rV5W3zcDGAPBaqlyRQlE0JcheBtVqsOuvgbBhK7DWuoW2Fuila3dyLfpig1NMbScG0ks0D3WnEjZpC6XBPSVWYHlN+2aevQAtH4pSOoeHtmJm1OZJgzBMV0rC46xwSTyxQKHoVegmKfhPccKlFa3/QVfcYgG/HwQ6r2VsbVh4+LdTemU+WeCySOE2yg7QwNWhbxIWxHfcSGLfXLzxw6euj06H+OUd8AO/giF/9HryOP5jiRe5kf3Z05gvBErMvs8T8O1ki0Pj2nnjPCVHy5rd2b5P65Td7LrAalGkb2n+Nd53QyP90UZRytxEvHfBO9+f88AHUgx+OBUpuXqExmAFrgmmx8LSeGSIUR1ehuPtPfJkr4jzqn2/kjf/md3H9DywmmJA/CQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6bdead49c31b4b90f55df3cc05013188"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>afdead49c31b4b90f55df3cc05013178</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:50</sys_updated_on>
+        <ui_id>9e4295e5-0414-4d3a-9311-b09674bbff48</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9K1GeKesQkgbe0KBKs9qdkUo7L6WKjH1TPDIJ9UenLOK/j+M4kAJlYJc+dDsvSL6+1z73cE7s5G7pM+r3/csk60Cv10GTAKEQoSQiKAlhEl7GlyEmyG/5OZ6ByRRACkHN+AlzXQaWy9s5xQpoGrSJFgJytVqZecrknOPFN5dmImTKODXzfv/uvuXPsTArKhB+f7k1dSwkjifATep1jWkbo1rMyzEtiJ4ZXCmrg3+5yqGb8T4PzYwpKuGglg/PCnIKBkeGuYSWP8O5abIQC7+vhDYBAZh+zflinTFluar6nOFnyf4xG4edMi8D0xhxHKyHqeOnCmdDrPDIrEyUFmu6CkZAVpRQyLDm6lMzViV8nStW5FWJwhNeVxdcz/IvFSH+eoHG36GlAQHzss8SedVWNpoWP65rkFcst4y4FnlBMF+PsFKCTbQq4Sx94GApnuH5nOUP6VwUT8wWGyiz9gM3g3bGix9mT8ke8jYmJe62YRW3r0x8aMPfsGBlE3+bZUzxquXLhfzEsZSbVgyH6aMukVSNuRZSy0JFQVlHBJurgdnlCRzmVcvJfUIOaotspFQtt1H7c9oJwk73MkzlDAuVBqlU2u5uAHNGsP0zdtQ/qpK8wYuk0wxxBOjaEDcO9VYTzg52mNq5l26wZd6XasKZIThsBhfZuKGS0R4zJOgdmcG19e7d8CsjQDcOI/NzmYUo6AQogThJSA9hksRx1A03GjIITA+Yp+avlla9tSUGdMakNOi9OscT8KiZAOplhfDUFDxnEq9hEg9nRute/Wz2nkCwzM21dx30RrucZsEj6KotOKhRXtd8vUqks6U0Asoftiw5qoPOjp0T7fj64RTEH8mQmt1ssVxFdnh+G+eW293m7FHD51JHcWcS91BCL2iGJhfdJIwuMAF0AXEQQURjEgXhG7gdBYdOEJrsEWnGgDdve7i2oTn3sNJy16h7Mk4z2REod0x25WC+Bt9ZzA73nXy2fuvkO5/VEoTek9c+0k2QHBQbNA7A74UW+R5HnOFV5wgQteL/rFBsC34b3L/Re/hb7/9/vXejg1JrvDSsn6GkyCkrEcvmpc/OgryG70CUHOSL27vlsnziM9KO4iyALgUSBlkSUpRFEc1CQlCEgjDoJqvV/Z4L3n9f8TTXHUHF+gOD5iB/RY3z3OZ+54qavtvcCt2k8173XJ8c3pn1Psp7Fjmotay30RbVhiCsmt8clmO/gj32+2M/L3IY+62xX2alpbhs2GQYcOsJG1uuqrEW2JUHjeGmluKFtJmSTIEaZdroi0hqreDi5/i8dwQjtfuGGrxhRckuSfXLU42zYoXtnHgjl2BX+uOGNU++6GwnX/e3+c7xqpTWD9HyWDPPvjM68v4nm2i5+/MWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=afdead49c31b4b90f55df3cc05013178"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>2e3b2319-4565-4d8f-a3fa-334d8d3ccab5</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>efdead49c31b4b90f55df3cc05013187</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <ui_id>cc554528-1a0d-4688-a626-2ebed100b571</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy2rjMBT9laB1EvyKm2Y3NBQG+oB26KZTzI113QjkRyW5bSbk3+fKkpPQlk4K3YTx7r6kc47vse/XTHA2YwnyIDwN0zwO4zgKgmiahIs0XoQRjwExZENWQYnUqTCvFaf4GWRrE+t1XIQnPI3CEaZJPEqmaTGCdDoZcR6dJtPJJC0Axm5us6FJLnQjYXXnD6BMvhSSK6zY7P5hyBpQdJdBxWbrN6VDwUpYoKTWmx7tW/Rm1diY13lbYmUy0Scv/OTcVwY/51ShIQsnDIYMXw1WHAlIAVLjkJVQcTC1WrGZUS0lFAK/ruRq27EUlXFES3jV4g/dnAS2r0BilnsRtmHmBXLpYg4Gbunk3LRqq1ctctROE44FtNKc7edcw3VjRF25EQML2U/Xsi2rK6cI2x6w9z5aTSCwsTwtckeruF3WLzc9yHNRdZJ4irLOQW4jMEaJRWssnDVDiZ3GJTSNqB6zRtXPohsmKOX4UVIwLmT9Qndq8ViNIbe4x6QqjM8pP+/Sd6CEJXFJx9DwZsj0Sp9J0HpHhTTMnlqLxBHzFLJOhU6CrNsEO5wr0ZgfdNUzeuCbobfDYvLZhuWnu4XaO3NnidcsCuMoOYkzXYIyWZhp03IngbZ7/c4Dt64+uOzrX3PEAXh7R/zq9uBj/N4U73IX+7ODK1fwlph8myWmx2QJT+PoPfEvJwTRp9/avU3qll/vuWBZ0y7LTOFTKxTy320QxNyuw/v1/6z1a044AG/vhHOBkusPCPQ2wJIwGswcoTdW8MXBnS9u/xDf5ocwDbrniFzx3/woHv4CZJLhfzkJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=efdead49c31b4b90f55df3cc05013187"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=53dead49c31b4b90f55df3cc0501311e^sys_idNOT IN2bdead49c31b4b90f55df3cc05013171,2bdead49c31b4b90f55df3cc05013175,efdead49c31b4b90f55df3cc05013173"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fede6d49c31b4b90f55df3cc05013182</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>2bdead49c31b4b90f55df3cc05013171</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:50</sys_updated_on>
+        <ui_id>aafed723-6caf-471a-9bd3-aee9e2a3e34a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnWaBebuSb4SBAgbQBmiCXNhBWJBUTpURVpOy4gv+9Sz1sI3HQBs2xN3OWu5wZ7cAd0a2tW2vu9NIY+ViRxbcHj8jKYfi7IxWUgiwI0xWXVuoq6wGPbEC1rrCs60ZvBEeIS1Mr2N2/rLC1VLwR4/QaGpxhRUMW3bOS5NhYUCiClAUsCudRSGl4EQf5PMqDkEcgIMKBCnKh8OpqovXhuke8V/naXe1wYxtZPY7n63HK7QTqhjtWAfWIeLKi4sh+UYAywiMlVBysbnYHpBHAbyp1BNaysjiOuMtPRv7CB8MkcRcLgRKZGIqHYzY6NsDFJVhAKi2zbTNeZWstmTCDOVwU0Cq7OsWGCze1kzq0WMjV1K1VW1ZfBkfIYcD0gRBpDZIQtVPqqI86itu13n6dWF7JqndlLCrNQB1OYNG7vLWOT0eEEiUOykqoa3Q0cwsg+2bkUvqPCg9+ofQWH3Xb5gNzxH00FvwrxC97+B4a6VR8xjHYPNDMwUiW9ZuJ49AmQfYeMTuzUmDMUSS6m/1sHcVB8iguG/xxLayRtV3iyxsx6th7Lxf9ZMe7LhVxmCYimdE4iGcx7uEsjYJgltN0/jHO86KIL3zoFx5UZixYsd9/bymNOLwakPca+7Z0pZAUSUCT8+mK5+fSdSZXb4xU+IdIue/5l4milP6P1D9HSppsCMKorX/8HRP14OIzvHnwmkmD1O4c9mn6h3GFHS6XZKfQVjc/nKgjtv8NNJ2FXasGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f2de6d49c31b4b90f55df3cc0501318b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id>aafed723-6caf-471a-9bd3-aee9e2a3e34a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>2bdead49c31b4b90f55df3cc05013175</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:50</sys_updated_on>
+        <ui_id>71b06681-d19a-4507-a08c-7eddc4205b8f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYBnQdAjNprcAhsBCqQNUKe5tIGwIimbKEWqfNhRBf97l3rYRuugTdtjb+YsuTsz2oE7or1rvLMP+sZasVbk+tNTRIQKGP7uiIKak2tCtWLCCa2KHojIFqQPhSW0Fyu60RIMokzYRkL7eLZIN0Iyw8cZDRjs5Lgh190PJcHwbZVAlV7RlObZPM+SJHtzmZbzvEwzlgOHHBtKKLnEq4uJ3MVdj0QvsnZtE3DrjFDr8Xw3dllNoDYssEqTiPBnxxXjyKcCaXlEalAMnDbtATEc2L2SR2AjlMN2JFx+tuIbDsxms3Cx4iiR8qF4OBajaQNcLcEBUvHUeTNeRQcF5XYwh/EKvHSLU2y4cN8EqcMTB6WcXmvpa/V+cIQcGkzfCBFvkQRvgtJAfdRRrTZ692FieStU78pYlJqCPJzAoXeld4FPR7jkNTYqamgadLRojN6K/jFyqeO1xENcSb3DoWHnYqCBeIzGQnyL+LKHH8GIoOIdtuFmpFmCFbTo9xPboU2c7CNiW7uQYO1RJLpbfPWB4iB5FFcM/oQn1IjG3eDkLR917KOf1/1k07vuY4MUOSvSmHqDrrjYOt+3DXu033/2SZIzBm1hX0rEnzV5XXKuYFbN0mR2PjmX83PJOZOZV8Yl+0Vcwrf6zbQkSfI/Ln8dF2GLYclHbf3wf5iWpxCNYebBayosUnsI2NvpPyQUWlwuQU+hnTZfgqgjtv8OWScFZI0GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b2de6d49c31b4b90f55df3cc05013187</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Admission Approval">53dead49c31b4b90f55df3cc0501311e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>aafed723-6caf-471a-9bd3-aee9e2a3e34a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>efdead49c31b4b90f55df3cc05013173</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:50</sys_updated_on>
+        <ui_id>2e3b2319-4565-4d8f-a3fa-334d8d3ccab5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V224TMRD9FeTn1WovTUTzVqWqQCpUoqUvUK1mbW9j4bWNL0nDKv/OeC9JBKmgwCNv8Rl75pyzc5SO6OBN8O5OXzgnHhVZfHpIiFARw98dUdBysiBUKya80KrqgYSsQYZYeKOd51JyixgTzkjY3p8o0ZWQzPKxvwGLXTxWFt0PJcHwZZNBk5/TnJbFvCyyrHh9ltfzss4LVgKHEhtKqLnEq8uJ2KvrHkmeZey3JuLOW6Eex/P12OV2ArVlkVWeJYQ/ea4YRz4NSMcT0oJi4LXd7hHLgd0oeQBWQnlsR+LlJye+4cBiNosXG44SKR+K+2M1WjbAzSV4QCqB+mDHq3SlBeVuMIfxBoL0y2NsuHBjotThiYdaTq+1DK16PzhC9g2mL4RIcEiCm6g0Uh91NLcrvfkwsbwSqndlLEpNQe5P4NG7OvjIpyNc8hYbVS0Yg45Wxuq16B8jlzZ9lHhIG6k3ODTuWwo0Ek/RWEivEL/s4XuwIqp4h236/Yk0a3CCVv1uYju0iZNdQtzWLSU4dxCJ7lZfQ6Q4SB7FVYM/8Qm1wvgLnLzmo45d8vOqH2151300SJGzKk9psOiKT50Pfdu4R7vd55BlJVs9n4Y/afGy1JzDrJnl2ex0as7mp1JzIi8vjErxi6jE7/SbScmy7H9U/joqwlXDgo/a+uH/MCkPMRbDzL3XVDikdhext9N/RyxscbkEPYY22n6Jog7Y7jtic8Z8hQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=53dead49c31b4b90f55df3cc0501311e^sys_idNOT IN1677f851c353cb90f55df3cc05013196,27dead49c31b4b90f55df3cc05013191,2bdead49c31b4b90f55df3cc05013190,63dead49c31b4b90f55df3cc05013191,6fdead49c31b4b90f55df3cc05013191,abdead49c31b4b90f55df3cc05013191,afdead49c31b4b90f55df3cc05013190,de77f851c353cb90f55df3cc05013196,e7dead49c31b4b90f55df3cc05013191,ebdead49c31b4b90f55df3cc05013190"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.student_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-12 03:51:08</sys_created_on>
+        <sys_id>1677f851c353cb90f55df3cc05013196</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 03:51:08</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>702de2ef-0f28-436d-914c-5ccda2cfa99a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>27dead49c31b4b90f55df3cc05013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>5d07cab7-3e4d-4380-84c8-f599d6a6018c</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>2bdead49c31b4b90f55df3cc05013190</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c4bfff4d-02f5-4854-8b2f-216720bb801e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>63dead49c31b4b90f55df3cc05013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>48999ac4-e8f4-4634-ac43-a3b2c9d126e2</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>6fdead49c31b4b90f55df3cc05013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>359601f9-c257-4d16-af61-ba6fad40af8f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.student_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>abdead49c31b4b90f55df3cc05013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d5786ede-d0a1-4bea-8ad3-e844bb77be53</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>afdead49c31b4b90f55df3cc05013190</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>070ea6bc-805c-4177-b667-bcf0efa00f50</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-12 03:51:08</sys_created_on>
+        <sys_id>de77f851c353cb90f55df3cc05013196</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 03:51:08</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>eb79e30c-9238-4a81-a7ba-76f65c026058</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.student_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>e7dead49c31b4b90f55df3cc05013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0ae755de-1f8f-4d49-976a-cf35c07148bc</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>53dead49c31b4b90f55df3cc0501311e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>ebdead49c31b4b90f55df3cc05013190</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9af54066-3321-4a84-9f18-0e413b4a62fb</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_53dead49c31b4b90f55df3cc0501311e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:40</sys_created_on>
+        <sys_id>53dead49c31b4b90f55df3cc05013165</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_53dead49c31b4b90f55df3cc0501311e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:39</sys_created_on>
+        <sys_id>93dead49c31b4b90f55df3cc05013140</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_53dead49c31b4b90f55df3cc0501311e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:39</sys_created_on>
+        <sys_id>9bdead49c31b4b90f55df3cc05013133</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-11 13:14:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_53dead49c31b4b90f55df3cc0501311e"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>7854a905c3d74b90f55df3cc050131bc</sys_id>
+        <latest_snapshot>53dead49c31b4b90f55df3cc0501311e</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-05-25-2026_06-12-2026_1106.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=7854a905c3d74b90f55df3cc050131bc^sys_idNOT INbbdead49c31b4b90f55df3cc050131e8"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"bbdead49c31b4b90f55df3cc050131e8","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>7854a905c3d74b90f55df3cc050131bc</plan_id>
+        <snapshot>56140eaec31b47d0f55df3cc050131f6</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-11 13:14:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bbdead49c31b4b90f55df3cc050131e8</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-16 05:17:51</sys_updated_on>
+        <trigger display_value="">27a1352ac39747d0f55df3cc0501310c</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=7854a905c3d74b90f55df3cc050131bc"/>
+</record_update>

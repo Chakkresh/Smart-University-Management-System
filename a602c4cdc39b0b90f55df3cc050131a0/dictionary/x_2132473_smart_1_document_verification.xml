@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="704e0409c31f0b90f55df3cc050131cd" label="Document Verification" max_length="40" name="x_2132473_smart_1_document_verification" type="collection">
+        <element label="Document Name" mandatory="true" max_length="40" name="document_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:getNextObjNumberPadded();" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Document Number" max_length="40" name="number" type="string" use_dynamic_default="true"/>
+        <element choice="3" default="pending" label="Verifcation Status" max_length="40" name="verifcation_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Verified" sequence="1" value="verified"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+            </choice>
+        </element>
+        <element label="Student Application" mandatory="true" max_length="32" name="student_application" reference="x_2132473_smart_1_student_application" type="reference"/>
+        <element choice="1" label="Document Type" mandatory="true" max_length="40" name="document_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Others" sequence="5" value="others"/>
+                <element inactive_on_update="false" label="Community Certificate" sequence="3" value="community_certificate"/>
+                <element inactive_on_update="false" label="Degree Certificate" sequence="1" value="degree_certificate"/>
+                <element inactive_on_update="false" label="12th Marksheet" sequence="6" value="12th Marksheet"/>
+                <element inactive_on_update="false" label="10th Marksheet" sequence="0" value="th_marksheet"/>
+                <element inactive_on_update="false" label="Id Proof" sequence="4" value="id_proof"/>
+                <element inactive_on_update="false" label="Transfer Certificate" sequence="2" value="transfer_certificate"/>
+            </choice>
+        </element>
+        <element label="Verified by" max_length="32" name="verified_by" reference="sys_user" type="reference"/>
+        <element label="Remarks" max_length="40" name="remarks" type="string"/>
+        <element label="Verified Date" max_length="40" name="verified_date" type="glide_date"/>
+        <index name="index">
+            <element name="student_application"/>
+        </index>
+        <index name="index2">
+            <element name="verified_by"/>
+        </index>
+    </element>
+</database>

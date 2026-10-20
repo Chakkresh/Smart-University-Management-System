@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_2132473_smart_1_hostel_request">x_2132473_smart_1_hostel_request</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>HOS</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-12 05:48:18</sys_created_on>
+        <sys_id>2a429159c317cb90f55df3cc05013197</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HOS</sys_name>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_number_2a429159c317cb90f55df3cc05013197</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-12 05:48:18</sys_updated_on>
+    </sys_number>
+</record_update>

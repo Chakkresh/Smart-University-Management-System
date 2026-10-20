@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_2132473_smart_1.admin" name="x_2132473_smart_1.admin">2a02c4cdc39b0b90f55df3cc050131c5</contains>
+        <role display_value="x_2132473_smart_1.University Admin" name="x_2132473_smart_1.University Admin">f3b53c8ec3df03d0f55df3cc050131d3</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-14 11:39:44</sys_created_on>
+        <sys_id>0ee574cec3df03d0f55df3cc0501316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2132473_smart_1.admin.x_2132473_smart_1.University Admin</sys_name>
+        <sys_package display_value="Smart University Management System" source="x_2132473_smart_1">a602c4cdc39b0b90f55df3cc050131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Smart University Management System">a602c4cdc39b0b90f55df3cc050131a0</sys_scope>
+        <sys_update_name>sys_user_role_contains_0ee574cec3df03d0f55df3cc0501316d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-14 11:39:44</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>
